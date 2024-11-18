@@ -45993,7 +45993,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46066,7 +46066,6 @@
         ],
         "kind": "m",
         "lineageTag": "f77ea6bd-d99d-4942-82af-aecb1ee9c9fc",
-        "mAttributes": "[ FunctionQueryBinding = \"{\"\"exemplarFormulaName\"\":\"\"Transformar o Arquivo de Exemplo\"\"}\" ]",
         "queryGroup": "Transformar Arquivo de Consulta1\\Consultas Auxiliares"
       },
       {
@@ -46157,7 +46156,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra (3)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (3)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46204,7 +46203,6 @@
         ],
         "kind": "m",
         "lineageTag": "686047ba-127b-4ef0-9043-dcc5651f452f",
-        "mAttributes": "[ FunctionQueryBinding = \"{\"\"exemplarFormulaName\"\":\"\"Transformar o Arquivo de Exemplo (2)\"\"}\" ]",
         "queryGroup": "Transformar Arquivo de Consulta1\\Transformar Arquivo de entrada\\Consultas Auxiliares"
       },
       {
@@ -46290,7 +46288,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra (5)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (5)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46335,7 +46333,6 @@
         ],
         "kind": "m",
         "lineageTag": "b9c51708-c97a-477a-9fa7-52716757205d",
-        "mAttributes": "[ FunctionQueryBinding = \"{\"\"exemplarFormulaName\"\":\"\"Transformar o Arquivo de Exemplo (3)\"\"}\" ]",
         "queryGroup": "Transformar Arquivo de Consulta1\\Transformar Arquivo de carteira\\Consultas Auxiliares"
       },
       {
@@ -46368,7 +46365,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra (6)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (6)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46415,7 +46412,6 @@
         ],
         "kind": "m",
         "lineageTag": "5703a078-a688-4f26-957e-cfa858471e61",
-        "mAttributes": "[ FunctionQueryBinding = \"{\"\"exemplarFormulaName\"\":\"\"Transformar o Arquivo de Exemplo (4)\"\"}\" ]",
         "queryGroup": "Transformar Arquivo de Consulta1\\Transformar Arquivo de carteira (2)\\Consultas Auxiliares"
       },
       {
@@ -46549,7 +46545,6 @@
         ],
         "kind": "m",
         "lineageTag": "4a123f69-a26d-4755-96af-dfe6f1bbfc21",
-        "mAttributes": "[ FunctionQueryBinding = \"{\"\"exemplarFormulaName\"\":\"\"Transformar o Arquivo de Exemplo (5)\"\"}\" ]",
         "queryGroup": "Transformar Arquivo de Consulta1\\Transformar Arquivo de status oLPN\\Consultas Auxiliares"
       }
     ],
@@ -46827,6 +46822,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -56001,6 +56000,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -56986,7 +56989,7 @@
                 "else \"TP-EAD\"),",
                 "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Personalização Adicionada\",{{\"TIPO DE ENTREGA\", type text}}),",
                 "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado2\",{{\" UF_ROTA\", \"ROTA\"}}),",
-                "    #\"Linhas Filtradas1\" = Table.SelectRows(#\"Colunas Renomeadas\",  each [ST] = \"A \" or [ST] = \"F\"),",
+                "    #\"Linhas Filtradas1\" = Table.SelectRows(#\"Colunas Renomeadas\", each ([ST] <> \"T \")),",
                 "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Linhas Filtradas1\", \"TRANSP\", each if [#\"   TRANSPORTADOR                         .1\"] = ",
                 "85186 then \"VVLOG\" else \"BR\"),",
                 "    #\"Tipo Alterado4\" = Table.TransformColumnTypes(#\"Personalização Adicionada1\",{{\"DT_LIMITE  \", type datetime}}),",
@@ -60902,6 +60905,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
