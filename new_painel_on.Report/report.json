@@ -3578,7 +3578,7 @@
     {
       "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#000027'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#000027'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"39D\"}}}}}]}}",
       "displayName": "Bases",
-      "displayOption": 1,
+      "displayOption": 2,
       "filters": "[]",
       "height": 3800.00,
       "name": "11cc73b1f8f0fe4239a8",
