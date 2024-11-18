@@ -1,0 +1,152 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 252.8161837683372,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "packed",
+          "nodeLineageTag": "90624690-4c0a-4216-b6de-534f5b91cf63",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 298.09333147238897,
+            "y": 0
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "757ab484-96ce-4fc0-8191-dc728c52f7e0",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 0
+          },
+          "nodeIndex": "entrada",
+          "nodeLineageTag": "142e175f-587a-4fbb-a5cd-6acb29705882",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 0
+          },
+          "nodeIndex": "carteira",
+          "nodeLineageTag": "ad533f5d-5eff-4721-ac8c-84768f608d64",
+          "size": {
+            "height": 636.83062219009616,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1096.5386718773109,
+            "y": 22.549330355822342
+          },
+          "nodeIndex": "status oLPN",
+          "nodeLineageTag": "3c4b09b5-1f59-4601-b6d1-ccffea4e39a5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 285.48681647268864,
+            "y": 338.14662386494609
+          },
+          "nodeIndex": "dHora",
+          "nodeLineageTag": "cd46b015-e069-4c00-aac6-134ce44bcc76",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 661.25354921706116,
+            "y": 388.89420195050855
+          },
+          "nodeIndex": "tTempo",
+          "nodeLineageTag": "3d9a607e-477f-4e6f-b93a-937da8719779",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1125.6315521132849,
+            "y": 363.53286840264013
+          },
+          "nodeIndex": "dTabela",
+          "nodeLineageTag": "68d57423-b0cb-42d2-8dfc-a999f7280d14",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1409.6315521132849,
+            "y": 242.41531109504808
+          },
+          "nodeIndex": "tDin_carteira",
+          "nodeLineageTag": "696bfad4-3fd6-44a5-8c5e-7ac021784827",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1693.6315521132849,
+            "y": 242.41531109504808
+          },
+          "nodeIndex": "tDesmarcados",
+          "nodeLineageTag": "33c5d81b-7615-45f1-a17a-3e5951603f69",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 63.287087723233981,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

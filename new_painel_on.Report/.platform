@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "new_painel_on"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1755720e-12ab-40b7-9dae-21e7b4dab841"
+  }
+}
