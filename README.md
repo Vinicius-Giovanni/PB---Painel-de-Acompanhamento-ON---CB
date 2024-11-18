@@ -34,9 +34,9 @@ O Painel de Acompanhamento de Pedidos do Setor Online em Power BI foi desenvolvi
 ## 🎨 Layout
 
 ### Widget
-![Widget1](https://github.com/Vinicius-Giovanni/PB---Acompanhamento-de-Operacoes---CB/blob/main/capa.png)<br>
-![Widget2](https://github.com/Vinicius-Giovanni/PB---Acompanhamento-de-Operacoes---CB/blob/main/Pedidos.png)<br>
-![Widget3](https://github.com/Vinicius-Giovanni/PB---Acompanhamento-de-Operacoes---CB/blob/main/Leves.png)
+![Widget1](https://github.com/Vinicius-Giovanni/PB---Painel-de-Acompanhamento-ON---CB/blob/main/tela1.png)<br>
+![Widget2](https://github.com/Vinicius-Giovanni/PB---Painel-de-Acompanhamento-ON---CB/blob/main/tela2.png)<br>
+
 
 
 ## 🚀 Como executar o projeto
