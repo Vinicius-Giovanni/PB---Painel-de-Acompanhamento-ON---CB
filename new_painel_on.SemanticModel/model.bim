@@ -46822,10 +46822,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navegação"
           }
         ],
         "columns": [
@@ -52424,12 +52420,6 @@
           },
           {
             "name": "v_cel_c5_l7",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
             "displayFolder": "Tabela Carteira",
             "expression": [
               "",
@@ -52454,6 +52444,7 @@
               "IF(ISBLANK(",
               "logica),\"0\",logica)"
             ],
+            "formatString": "0",
             "lineageTag": "8a3e7e65-5d6c-46d9-9ba7-15528f6482cc"
           },
           {
@@ -56000,10 +55991,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navegação"
           }
         ],
         "columns": [
@@ -60905,10 +60892,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navegação"
           }
         ],
         "columns": [
