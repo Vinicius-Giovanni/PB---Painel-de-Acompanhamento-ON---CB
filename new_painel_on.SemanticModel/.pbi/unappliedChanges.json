@@ -438,7 +438,7 @@
         "    Navegação1"
       ],
       "loadAsTableDisabled": true,
-      "resultType": "Binary",
+      "resultType": "Exception",
       "isHidden": false
     },
     {
@@ -501,7 +501,7 @@
         "    Navegação1"
       ],
       "loadAsTableDisabled": true,
-      "resultType": "Binary",
+      "resultType": "Exception",
       "isHidden": false
     },
     {

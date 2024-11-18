@@ -55470,6 +55470,7 @@
           },
           {
             "name": "released_saldo_<>vvlog",
+            "displayFolder": "Released",
             "expression": [
               "",
               "SUM(tDesmarcados[Total Fracionado])"
@@ -55479,6 +55480,7 @@
           },
           {
             "name": "released_saldo_<>br",
+            "displayFolder": "Released",
             "expression": [
               "",
               "SUM(tDesmarcados[Total VVLOG])"
@@ -55488,6 +55490,7 @@
           },
           {
             "name": "released_vencidos<>vvlog",
+            "displayFolder": "Released",
             "expression": [
               "",
               "var a = ",
@@ -55504,6 +55507,7 @@
           },
           {
             "name": "released_vence_hoje<>vvlog",
+            "displayFolder": "Released",
             "expression": [
               "",
               "",
@@ -55520,6 +55524,7 @@
           },
           {
             "name": "released_d+1_<>vvlog",
+            "displayFolder": "Released",
             "expression": [
               "",
               "var a = ",
@@ -55535,6 +55540,7 @@
           },
           {
             "name": "released_d+2_<>vvlog",
+            "displayFolder": "Released",
             "expression": [
               "",
               "",
@@ -55551,6 +55557,7 @@
           },
           {
             "name": "released_vencidos_<>br",
+            "displayFolder": "Released",
             "expression": [
               "",
               "",
@@ -55567,6 +55574,7 @@
           },
           {
             "name": "released_vence_hoje_<>br",
+            "displayFolder": "Released",
             "expression": [
               "",
               "",
@@ -55583,6 +55591,7 @@
           },
           {
             "name": "released_d+1_<>br",
+            "displayFolder": "Released",
             "expression": [
               "",
               "",
@@ -55599,6 +55608,7 @@
           },
           {
             "name": "released_d+2_<>br",
+            "displayFolder": "Released",
             "expression": [
               "",
               "",
@@ -55611,6 +55621,22 @@
             ],
             "formatString": "0",
             "lineageTag": "7b6b2a95-d2b5-41d5-ac8d-26e8927c9ce5"
+          },
+          {
+            "name": "acomp_dia",
+            "displayFolder": "Outros",
+            "expression": [
+              "",
+              "VAR DiaSemana = WEEKDAY(TODAY(), 2)",
+              "RETURN ",
+              "IF(",
+              "    DiaSemana IN {6, 7},",
+              "    \"Vence Segunda\",",
+              "    \"Vence Hoje\"",
+              ")",
+              ""
+            ],
+            "lineageTag": "905655bf-ea80-44da-a220-4f3842681014"
           }
         ],
         "partitions": [
