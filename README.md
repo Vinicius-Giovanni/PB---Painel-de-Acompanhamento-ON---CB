@@ -16,6 +16,7 @@
 ## 💻 Sobre o projeto
 
 O Painel de Acompanhamento de Pedidos do Setor Online em Power BI foi desenvolvido para monitorizar e analisar, de forma estratégica, o ciclo de vida dos pedidos. O painel abrange etapas como vencidos, vence hoje, D+1, D+2 e >D+2, permitindo uma gestão eficiente. Com funcionalidades que incluem análise temporal detalhada, comparações semanais, monitorização de tarefas e gestão da carteira de pedidos, o painel fornece informações robustas para suportar decisões estratégicas e operacionais. Desenvolvido com Power BI, Power Query e DAX, oferece uma visão interativa e completa para minimizar gargalos e melhorar a performance do setor.
+
 ---
 
 ## ⚙️ Funcionalidades
@@ -34,9 +35,9 @@ O Painel de Acompanhamento de Pedidos do Setor Online em Power BI foi desenvolvi
 ## 🎨 Layout
 
 ### Widget
-![Widget1](https://github.com/Vinicius-Giovanni/PB---Acompanhamento-de-Operacoes---CB/blob/main/capa.png)<br>
-![Widget2](https://github.com/Vinicius-Giovanni/PB---Acompanhamento-de-Operacoes---CB/blob/main/Pedidos.png)<br>
-![Widget3](https://github.com/Vinicius-Giovanni/PB---Acompanhamento-de-Operacoes---CB/blob/main/Leves.png)
+![Widget1](https://github.com/Vinicius-Giovanni/PB---Painel-de-Acompanhamento-ON---CB/blob/main/tela1.png)<br>
+![Widget2](https://github.com/Vinicius-Giovanni/PB---Painel-de-Acompanhamento-ON---CB/blob/main/tela2.png)<br>
+
 
 
 ## 🚀 Como executar o projeto
