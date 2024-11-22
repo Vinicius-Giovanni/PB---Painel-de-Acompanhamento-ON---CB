@@ -45993,7 +45993,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Binary"
           }
         ],
         "expression": "#\"Arquivo de Amostra\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46077,7 +46077,7 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Table"
           }
         ],
         "expression": [
@@ -46088,9 +46088,11 @@
           "    #\"Relatórios rotativos\" = #\"Relatórios dinâmicos - ADMs - Vinicius & Almeida\"{[Name=\"Relatórios rotativos\"]}[Content],",
           "    #\"Painel Online - ADMs - Vinicius & Almeida\" = #\"Relatórios rotativos\"{[Name=\"Painel Online - ADMs - Vinicius & Almeida\"]}[Content],",
           "    #\"Packed - ADMs - Vinicius & Almeida\" = #\"Painel Online - ADMs - Vinicius & Almeida\"{[Name=\"Packed - ADMs - Vinicius & Almeida\"]}[Content],",
-          "    Navegação1 = #\"Packed - ADMs - Vinicius & Almeida\"{0}[Content]",
+          "    Navegação1 = #\"Packed - ADMs - Vinicius & Almeida\"{0}[Content],",
+          "    #\"Pasta de Trabalho Importada do Excel\" = Excel.Workbook(Navegação1),",
+          "    Page2_1_Sheet = #\"Pasta de Trabalho Importada do Excel\"{[Item=\"Page2_1\",Kind=\"Sheet\"]}[Data]",
           "in",
-          "    Navegação1"
+          "    Page2_1_Sheet"
         ],
         "kind": "m",
         "lineageTag": "0cd632a1-ff33-476e-a512-98d13f5a7376",
@@ -46156,7 +46158,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Binary"
           }
         ],
         "expression": "#\"Arquivo de Amostra (3)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (3)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46288,7 +46290,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Binary"
           }
         ],
         "expression": "#\"Arquivo de Amostra (5)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (5)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46365,7 +46367,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Binary"
           }
         ],
         "expression": "#\"Arquivo de Amostra (6)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (6)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46822,6 +46824,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -55652,6 +55658,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -56986,8 +56996,8 @@
                 "[#\"DT_LIMITE  \"] + #duration(0, 23, 59,59)),",
                 "    #\"Tipo Alterado5\" = Table.TransformColumnTypes(#\"Personalização Adicionada3\",{{\"data limite\", type datetime}}),",
                 "    #\"Personalização Adicionada2\" = Table.AddColumn(#\"Tipo Alterado5\", \"status\", each if DateTime.LocalNow() > DateTime.From([data limite]) then \"Vencidos\"",
-                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) < 1 then \"Vence Hoje\"",
-                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) < 2 then \"D+1\" // Agora essa condição verifica se a diferença é menor que 2",
+                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 0 then \"Vence Hoje\"",
+                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 1 then \"D+1\" ",
                 "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2 then \"D+2\"",
                 "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 4) then \"D+1\"",
                 "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
@@ -56997,8 +57007,8 @@
                 "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
                 "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
                 "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 1) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 2) then \"Vence Segunda\"",
-                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 2 then \"D+1\"",
-                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 3 then \"D+2\"",
+                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 1 then \"D+1\"",
+                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2 then \"D+2\"",
                 "else \" >D+2\"),",
                 "    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Personalização Adicionada2\",{{\"status\", type text}}),",
                 "    #\"Coluna Duplicada\" = Table.DuplicateColumn(#\"Tipo Alterado3\", \"data limite\", \"data limite - Copiar\"),",
@@ -58896,7 +58906,7 @@
                 "    status = Table.AddColumn(#\"Colunas Renomeadas\", \"status\", each if [Etapa] = \"Shipped - Expedido\" then \"Expedido\"",
                 "else if [Etapa] = \"Cancelled - Cancelado\" then \"Cancelado\"",
                 "else if DateTime.From([Data Limite Expedição]) < DateTime.LocalNow() then \"Vencidos\"",
-                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 1 then \"Vence Hoje\"",
+                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 0 then \"Vence Hoje\"",
                 "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 4) then \"D+1\"",
                 "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
                 "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
@@ -58905,8 +58915,8 @@
                 "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
                 "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
                 "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 1) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 2) then \"Vence Segunda\"",
-                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 1.1 then \"D+1\"",
-                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 3 then \"D+2\"",
+                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 1 then \"D+1\"",
+                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 2 then \"D+2\"",
                 "else \" >D+2\"),",
                 "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(status,{{\"status\", type text}}),",
                 "    #\"Coluna Duplicada\" = Table.DuplicateColumn(#\"Tipo Alterado2\", \"Data Limite Expedição\", \"Data Limite Expedição - Copiar\"),",

@@ -1539,12 +1539,12 @@
           "z": 204000.00
         },
         {
-          "config": "{\"name\":\"66eb16a22719793668a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":2673.2342007434945,\"y\":1131.2267657992566,\"z\":379000,\"width\":189.5910780669145,\"height\":34.75836431226766,\"tabOrder\":89000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"},\"Name\":\"Medidas.packed_c_gaiola_em_expedicao_<>_br_vence_hoje\",\"NativeReferenceName\":\"packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#D7E9F8'\"}}}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "config": "{\"name\":\"66eb16a22719793668a0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":2673.3333333333335,\"y\":1130,\"z\":379000,\"width\":190,\"height\":35,\"tabOrder\":89000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"},\"Name\":\"Medidas.packed_c_gaiola_em_expedicao_<>_br_vence_hoje\",\"NativeReferenceName\":\"packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"packed_c_gaiola_em_expedicao_<>_br_vence_hoje\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"17D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#D7E9F8'\"}}}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "height": 34.76,
-          "width": 189.59,
-          "x": 2673.23,
-          "y": 1131.23,
+          "height": 35.00,
+          "width": 190.00,
+          "x": 2673.33,
+          "y": 1130.00,
           "z": 379000.00
         },
         {
