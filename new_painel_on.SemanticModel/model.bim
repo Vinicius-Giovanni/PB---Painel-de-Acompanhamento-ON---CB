@@ -7331,6 +7331,29 @@
                   }
                 ]
               },
+              "medida.acomp_dia": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "acomp_dia"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "acomp dia": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "acomp_dia": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
               "medida.all_d1": {
                 "Definition": {
                   "Binding": {
@@ -9860,134 +9883,6 @@
                   }
                 ]
               },
-              "medida.packed_c_gaiola_em_expedicao__br_vence_hoje": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_br_vence_hoje"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_br_vence_hoje": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "medida.packed_c_gaiola_em_expedicao__br_vencidos": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_br_vencidos"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_br_vencidos": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "medida.packed_c_gaiola_em_expedicao__d1__br": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_d+1_<>_br"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_d+1_<>_br": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "medida.packed_c_gaiola_em_expedicao__d1__vvlog": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_d+1_<>_vvlog"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_d+1_<>_vvlog": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "medida.packed_c_gaiola_em_expedicao__d2__br": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_d+2_<>_br"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_d+2_<>_br": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "medida.packed_c_gaiola_em_expedicao__d2__vvlog": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_d+2_<>_vvlog"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_d+2_<>_vvlog": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "medida.packed_c_gaiola_em_expedicao__vvlog_vence_hoje": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_vvlog_vence_hoje"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_vvlog_vence_hoje": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "medida.packed_c_gaiola_em_expedicao__vvlog_vencidos": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "packed_c_gaiola_em_expedicao_<>_vvlog_vencidos"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "packed_c_gaiola_em_expedicao_<>_vvlog_vencidos": {
-                      "State": "Generated"
-                    }
-                  }
-                ]
-              },
               "medida.packed_s_gaiola_em_faturamento__br_vence_hoje": {
                 "Definition": {
                   "Binding": {
@@ -10583,6 +10478,16 @@
                   },
                   {
                     "Qtd. Pedidos": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Qtd Pedidos": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -11195,52 +11100,6 @@
                   },
                   {
                     "saldo_created_fim_de_separacao_vvlog": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  }
-                ]
-              },
-              "medida.saldo_packed_c_gaiola_em_expedicao_br": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "saldo_packed_c_gaiola_em_expedicao_br"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "saldo packed c gaiola em expedicao br": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "saldo_packed_c_gaiola_em_expedicao_br": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.99
-                    }
-                  }
-                ]
-              },
-              "medida.saldo_packed_c_gaiola_em_expedicao_vvlog": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Medidas",
-                    "ConceptualProperty": "saldo_packed_c_gaiola_em_expedicao_vvlog"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "saldo packed c gaiola em expedicao vvlog": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "saldo_packed_c_gaiola_em_expedicao_vvlog": {
                       "State": "Generated",
                       "Type": "Noun",
                       "Weight": 0.99
@@ -15204,6 +15063,72 @@
                       "State": "Generated",
                       "Type": "Noun",
                       "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "medida.zero": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "zero"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "zero": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "zippo": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "nil": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "zip": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "zilch": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "naught": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
                     }
                   }
                 ]
@@ -22965,7 +22890,7 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres1",
+                    "ID": "anos_have_trimestres15",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -22978,12 +22903,12 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos1",
+                    "ID": "trimestres_have_anos15",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos15",
+                    "ID": "trimestres_are_in_anos1",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.ano"
@@ -23031,7 +22956,7 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos2",
+                    "ID": "hierarquia_de_data_have_anos16",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23064,7 +22989,7 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias2",
+                    "ID": "hierarquia_de_data_have_dias16",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23097,7 +23022,7 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê2",
+                    "ID": "hierarquia_de_data_have_mê16",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23130,7 +23055,7 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres2",
+                    "ID": "hierarquia_de_data_have_trimestres16",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23163,7 +23088,7 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias1",
+                    "ID": "mê_have_dias15",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23176,12 +23101,12 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê1",
+                    "ID": "dias_have_mê15",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê15",
+                    "ID": "dias_are_in_mê1",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.mê"
@@ -23229,7 +23154,7 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê1",
+                    "ID": "trimestres_have_mê15",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23242,12 +23167,12 @@
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres1",
+                    "ID": "mê_have_trimestres15",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres15",
+                    "ID": "mê_are_in_trimestres1",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_limite2.variation.hierarquia_de_data.trimestre"
@@ -23328,7 +23253,7 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres2",
+                    "ID": "anos_have_trimestres16",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23341,12 +23266,12 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos2",
+                    "ID": "trimestres_have_anos16",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos14",
+                    "ID": "trimestres_are_in_anos",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.ano"
@@ -23394,7 +23319,7 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos3",
+                    "ID": "hierarquia_de_data_have_anos17",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23427,7 +23352,7 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias3",
+                    "ID": "hierarquia_de_data_have_dias17",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23460,7 +23385,7 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê3",
+                    "ID": "hierarquia_de_data_have_mê17",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23493,7 +23418,7 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres3",
+                    "ID": "hierarquia_de_data_have_trimestres17",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23526,7 +23451,7 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias2",
+                    "ID": "mê_have_dias16",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23539,12 +23464,12 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê2",
+                    "ID": "dias_have_mê16",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê14",
+                    "ID": "dias_are_in_mê",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.mê"
@@ -23592,7 +23517,7 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê2",
+                    "ID": "trimestres_have_mê16",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23605,12 +23530,12 @@
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres2",
+                    "ID": "mê_have_trimestres16",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres14",
+                    "ID": "mê_are_in_trimestres",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_limite.variation.hierarquia_de_data.trimestre"
@@ -23691,7 +23616,7 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres7",
+                    "ID": "anos_have_trimestres14",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23704,12 +23629,12 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos7",
+                    "ID": "trimestres_have_anos14",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos9",
+                    "ID": "trimestres_are_in_anos2",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.ano"
@@ -23757,7 +23682,7 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos8",
+                    "ID": "hierarquia_de_data_have_anos15",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23790,7 +23715,7 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias8",
+                    "ID": "hierarquia_de_data_have_dias15",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23823,7 +23748,7 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê8",
+                    "ID": "hierarquia_de_data_have_mê15",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23856,7 +23781,7 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres8",
+                    "ID": "hierarquia_de_data_have_trimestres15",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -23889,7 +23814,7 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias7",
+                    "ID": "mê_have_dias14",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23902,12 +23827,12 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê7",
+                    "ID": "dias_have_mê14",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê9",
+                    "ID": "dias_are_in_mê2",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.mê"
@@ -23955,7 +23880,7 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê7",
+                    "ID": "trimestres_have_mê14",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -23968,12 +23893,12 @@
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres7",
+                    "ID": "mê_have_trimestres14",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres9",
+                    "ID": "mê_are_in_trimestres2",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_marcada.variation.hierarquia_de_data.trimestre"
@@ -24054,7 +23979,7 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres8",
+                    "ID": "anos_have_trimestres13",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24067,12 +23992,12 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos8",
+                    "ID": "trimestres_have_anos13",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos8",
+                    "ID": "trimestres_are_in_anos3",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.ano"
@@ -24120,7 +24045,7 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos9",
+                    "ID": "hierarquia_de_data_have_anos14",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24153,7 +24078,7 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias9",
+                    "ID": "hierarquia_de_data_have_dias14",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24186,7 +24111,7 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê9",
+                    "ID": "hierarquia_de_data_have_mê14",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24219,7 +24144,7 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres9",
+                    "ID": "hierarquia_de_data_have_trimestres14",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24252,7 +24177,7 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias8",
+                    "ID": "mê_have_dias13",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24265,12 +24190,12 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê8",
+                    "ID": "dias_have_mê13",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê8",
+                    "ID": "dias_are_in_mê3",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.mê"
@@ -24318,7 +24243,7 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê8",
+                    "ID": "trimestres_have_mê13",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24331,12 +24256,12 @@
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres8",
+                    "ID": "mê_have_trimestres13",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres8",
+                    "ID": "mê_are_in_trimestres3",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_prometida.variation.hierarquia_de_data.trimestre"
@@ -24417,7 +24342,7 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres9",
+                    "ID": "anos_have_trimestres12",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24430,12 +24355,12 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos9",
+                    "ID": "trimestres_have_anos12",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos7",
+                    "ID": "trimestres_are_in_anos4",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.ano"
@@ -24483,7 +24408,7 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos10",
+                    "ID": "hierarquia_de_data_have_anos13",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24516,7 +24441,7 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias10",
+                    "ID": "hierarquia_de_data_have_dias13",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24549,7 +24474,7 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê10",
+                    "ID": "hierarquia_de_data_have_mê13",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24582,7 +24507,7 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres10",
+                    "ID": "hierarquia_de_data_have_trimestres13",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24615,7 +24540,7 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias9",
+                    "ID": "mê_have_dias12",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24628,12 +24553,12 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê9",
+                    "ID": "dias_have_mê12",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê7",
+                    "ID": "dias_are_in_mê4",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.mê"
@@ -24681,7 +24606,7 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê9",
+                    "ID": "trimestres_have_mê12",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24694,12 +24619,12 @@
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres9",
+                    "ID": "mê_have_trimestres12",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres7",
+                    "ID": "mê_are_in_trimestres4",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.data_pve_mig.variation.hierarquia_de_data.trimestre"
@@ -24780,7 +24705,7 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres12",
+                    "ID": "anos_have_trimestres11",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24793,12 +24718,12 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos12",
+                    "ID": "trimestres_have_anos11",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos4",
+                    "ID": "trimestres_are_in_anos5",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.ano"
@@ -24846,7 +24771,7 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos13",
+                    "ID": "hierarquia_de_data_have_anos12",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24879,7 +24804,7 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias13",
+                    "ID": "hierarquia_de_data_have_dias12",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24912,7 +24837,7 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê13",
+                    "ID": "hierarquia_de_data_have_mê12",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24945,7 +24870,7 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres13",
+                    "ID": "hierarquia_de_data_have_trimestres12",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -24978,7 +24903,7 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias12",
+                    "ID": "mê_have_dias11",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -24991,12 +24916,12 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê12",
+                    "ID": "dias_have_mê11",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê4",
+                    "ID": "dias_are_in_mê5",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.mê"
@@ -25044,7 +24969,7 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê12",
+                    "ID": "trimestres_have_mê11",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -25057,12 +24982,12 @@
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres12",
+                    "ID": "mê_have_trimestres11",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres4",
+                    "ID": "mê_are_in_trimestres5",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.dt_emi_carga.variation.hierarquia_de_data.trimestre"
@@ -25506,7 +25431,7 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres11",
+                    "ID": "anos_have_trimestres9",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -25519,12 +25444,12 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos11",
+                    "ID": "trimestres_have_anos9",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos5",
+                    "ID": "trimestres_are_in_anos7",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.ano"
@@ -25572,7 +25497,7 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos12",
+                    "ID": "hierarquia_de_data_have_anos10",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25605,7 +25530,7 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias12",
+                    "ID": "hierarquia_de_data_have_dias10",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25638,7 +25563,7 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê12",
+                    "ID": "hierarquia_de_data_have_mê10",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25671,7 +25596,7 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres12",
+                    "ID": "hierarquia_de_data_have_trimestres10",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -25704,7 +25629,7 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias11",
+                    "ID": "mê_have_dias9",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -25717,12 +25642,12 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê11",
+                    "ID": "dias_have_mê9",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê5",
+                    "ID": "dias_are_in_mê7",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.mê"
@@ -25770,7 +25695,7 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê11",
+                    "ID": "trimestres_have_mê9",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -25783,12 +25708,12 @@
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres11",
+                    "ID": "mê_have_trimestres9",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres5",
+                    "ID": "mê_are_in_trimestres7",
                     "Preposition": {
                       "Object": {
                         "Role": "carteira.dt_prev_carga.variation.hierarquia_de_data.trimestre"
@@ -34759,7 +34684,7 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres13",
+                    "ID": "anos_have_trimestres8",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -34772,12 +34697,12 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos13",
+                    "ID": "trimestres_have_anos8",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos3",
+                    "ID": "trimestres_are_in_anos8",
                     "Preposition": {
                       "Object": {
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.ano"
@@ -34825,7 +34750,7 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos14",
+                    "ID": "hierarquia_de_data_have_anos9",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -34858,7 +34783,7 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias14",
+                    "ID": "hierarquia_de_data_have_dias9",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -34891,7 +34816,7 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê14",
+                    "ID": "hierarquia_de_data_have_mê9",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -34924,7 +34849,7 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres14",
+                    "ID": "hierarquia_de_data_have_trimestres9",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -34957,7 +34882,7 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias13",
+                    "ID": "mê_have_dias8",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -34970,12 +34895,12 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê13",
+                    "ID": "dias_have_mê8",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê3",
+                    "ID": "dias_are_in_mê8",
                     "Preposition": {
                       "Object": {
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.mê"
@@ -35023,7 +34948,7 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê13",
+                    "ID": "trimestres_have_mê8",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -35036,12 +34961,12 @@
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres13",
+                    "ID": "mê_have_trimestres8",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres3",
+                    "ID": "mê_are_in_trimestres8",
                     "Preposition": {
                       "Object": {
                         "Role": "entrada.data_da_integracao.variation.hierarquia_de_data.trimestre"
@@ -35122,7 +35047,7 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres14",
+                    "ID": "anos_have_trimestres7",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -35135,12 +35060,12 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos14",
+                    "ID": "trimestres_have_anos7",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos2",
+                    "ID": "trimestres_are_in_anos9",
                     "Preposition": {
                       "Object": {
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.ano"
@@ -35188,7 +35113,7 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos15",
+                    "ID": "hierarquia_de_data_have_anos8",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -35221,7 +35146,7 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias15",
+                    "ID": "hierarquia_de_data_have_dias8",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -35254,7 +35179,7 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê15",
+                    "ID": "hierarquia_de_data_have_mê8",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -35287,7 +35212,7 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres15",
+                    "ID": "hierarquia_de_data_have_trimestres8",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -35320,7 +35245,7 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias14",
+                    "ID": "mê_have_dias7",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -35333,12 +35258,12 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê14",
+                    "ID": "dias_have_mê7",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê2",
+                    "ID": "dias_are_in_mê9",
                     "Preposition": {
                       "Object": {
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.mê"
@@ -35386,7 +35311,7 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê14",
+                    "ID": "trimestres_have_mê7",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -35399,12 +35324,12 @@
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres14",
+                    "ID": "mê_have_trimestres7",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres2",
+                    "ID": "mê_are_in_trimestres9",
                     "Preposition": {
                       "Object": {
                         "Role": "entrada.data_de_limite.variation.hierarquia_de_data.trimestre"
@@ -36804,6 +36729,39 @@
                 },
                 "State": "Generated"
               },
+              "medida_has_acomp_dia": {
+                "Binding": {
+                  "ConceptualEntity": "Medidas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.acomp_dia"
+                      },
+                      "Subject": {
+                        "Role": "medida"
+                      }
+                    },
+                    "ID": "medidas_have_acomp_dia",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida": {
+                    "Target": {
+                      "Entity": "medida"
+                    }
+                  },
+                  "medida.acomp_dia": {
+                    "Target": {
+                      "Entity": "medida.acomp_dia"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "medida_has_contagem_back": {
                 "Binding": {
                   "ConceptualEntity": "Medidas"
@@ -37134,6 +37092,39 @@
                 },
                 "State": "Generated"
               },
+              "medida_has_zero": {
+                "Binding": {
+                  "ConceptualEntity": "Medidas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.zero"
+                      },
+                      "Subject": {
+                        "Role": "medida"
+                      }
+                    },
+                    "ID": "medidas_have_zero",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida": {
+                    "Target": {
+                      "Entity": "medida"
+                    }
+                  },
+                  "medida.zero": {
+                    "Target": {
+                      "Entity": "medida.zero"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "packed_data_packed_has_variation_hierarquia_de_data": {
                 "Binding": {
                   "ConceptualEntity": "packed"
@@ -37181,7 +37172,7 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres15",
+                    "ID": "anos_have_trimestres6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -37194,12 +37185,12 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos15",
+                    "ID": "trimestres_have_anos6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos1",
+                    "ID": "trimestres_are_in_anos10",
                     "Preposition": {
                       "Object": {
                         "Role": "packed.data_packed.variation.hierarquia_de_data.ano"
@@ -37247,7 +37238,7 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos16",
+                    "ID": "hierarquia_de_data_have_anos7",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37280,7 +37271,7 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias16",
+                    "ID": "hierarquia_de_data_have_dias7",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37313,7 +37304,7 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê16",
+                    "ID": "hierarquia_de_data_have_mê7",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37346,7 +37337,7 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres16",
+                    "ID": "hierarquia_de_data_have_trimestres7",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37379,7 +37370,7 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias15",
+                    "ID": "mê_have_dias6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -37392,12 +37383,12 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê15",
+                    "ID": "dias_have_mê6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê1",
+                    "ID": "dias_are_in_mê10",
                     "Preposition": {
                       "Object": {
                         "Role": "packed.data_packed.variation.hierarquia_de_data.mê"
@@ -37445,7 +37436,7 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê15",
+                    "ID": "trimestres_have_mê6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -37458,12 +37449,12 @@
                         "Role": "packed.data_packed.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres15",
+                    "ID": "mê_have_trimestres6",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres1",
+                    "ID": "mê_are_in_trimestres10",
                     "Preposition": {
                       "Object": {
                         "Role": "packed.data_packed.variation.hierarquia_de_data.trimestre"
@@ -37544,7 +37535,7 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres16",
+                    "ID": "anos_have_trimestres5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -37557,12 +37548,12 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos16",
+                    "ID": "trimestres_have_anos5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos",
+                    "ID": "trimestres_are_in_anos11",
                     "Preposition": {
                       "Object": {
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.ano"
@@ -37610,7 +37601,7 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos17",
+                    "ID": "hierarquia_de_data_have_anos6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37643,7 +37634,7 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias17",
+                    "ID": "hierarquia_de_data_have_dias6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37676,7 +37667,7 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê17",
+                    "ID": "hierarquia_de_data_have_mê6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37709,7 +37700,7 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres17",
+                    "ID": "hierarquia_de_data_have_trimestres6",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -37742,7 +37733,7 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias16",
+                    "ID": "mê_have_dias5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -37755,12 +37746,12 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê16",
+                    "ID": "dias_have_mê5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê",
+                    "ID": "dias_are_in_mê11",
                     "Preposition": {
                       "Object": {
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.mê"
@@ -37808,7 +37799,7 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê16",
+                    "ID": "trimestres_have_mê5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -37821,12 +37812,12 @@
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres16",
+                    "ID": "mê_have_trimestres5",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres",
+                    "ID": "mê_are_in_trimestres11",
                     "Preposition": {
                       "Object": {
                         "Role": "packed.data_pedido.variation.hierarquia_de_data.trimestre"
@@ -39344,7 +39335,7 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres6",
+                    "ID": "anos_have_trimestres4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -39357,12 +39348,12 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos6",
+                    "ID": "trimestres_have_anos4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos10",
+                    "ID": "trimestres_are_in_anos12",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.ano"
@@ -39410,7 +39401,7 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos7",
+                    "ID": "hierarquia_de_data_have_anos5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39443,7 +39434,7 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias7",
+                    "ID": "hierarquia_de_data_have_dias5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39476,7 +39467,7 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê7",
+                    "ID": "hierarquia_de_data_have_mê5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39509,7 +39500,7 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres7",
+                    "ID": "hierarquia_de_data_have_trimestres5",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39542,7 +39533,7 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias6",
+                    "ID": "mê_have_dias4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -39555,12 +39546,12 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê6",
+                    "ID": "dias_have_mê4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê10",
+                    "ID": "dias_are_in_mê12",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.mê"
@@ -39608,7 +39599,7 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê6",
+                    "ID": "trimestres_have_mê4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -39621,12 +39612,12 @@
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres6",
+                    "ID": "mê_have_trimestres4",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres10",
+                    "ID": "mê_are_in_trimestres12",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_do_pedido.variation.hierarquia_de_data.trimestre"
@@ -39707,7 +39698,7 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres5",
+                    "ID": "anos_have_trimestres3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -39720,12 +39711,12 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos5",
+                    "ID": "trimestres_have_anos3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos11",
+                    "ID": "trimestres_are_in_anos13",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.ano"
@@ -39773,7 +39764,7 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos6",
+                    "ID": "hierarquia_de_data_have_anos4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39806,7 +39797,7 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias6",
+                    "ID": "hierarquia_de_data_have_dias4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39839,7 +39830,7 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê6",
+                    "ID": "hierarquia_de_data_have_mê4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39872,7 +39863,7 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres6",
+                    "ID": "hierarquia_de_data_have_trimestres4",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -39905,7 +39896,7 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias5",
+                    "ID": "mê_have_dias3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -39918,12 +39909,12 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê5",
+                    "ID": "dias_have_mê3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê11",
+                    "ID": "dias_are_in_mê13",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.mê"
@@ -39971,7 +39962,7 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê5",
+                    "ID": "trimestres_have_mê3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -39984,12 +39975,12 @@
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres5",
+                    "ID": "mê_have_trimestres3",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres11",
+                    "ID": "mê_are_in_trimestres13",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_locação_pedido.variation.hierarquia_de_data.trimestre"
@@ -40070,7 +40061,7 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres17",
+                    "ID": "anos_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -40083,12 +40074,12 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos17",
+                    "ID": "trimestres_have_anos2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos17",
+                    "ID": "trimestres_are_in_anos14",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.ano"
@@ -40136,7 +40127,7 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos",
+                    "ID": "hierarquia_de_data_have_anos3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40169,7 +40160,7 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias",
+                    "ID": "hierarquia_de_data_have_dias3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40202,7 +40193,7 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê",
+                    "ID": "hierarquia_de_data_have_mê3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40235,7 +40226,7 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres",
+                    "ID": "hierarquia_de_data_have_trimestres3",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40268,7 +40259,7 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias17",
+                    "ID": "mê_have_dias2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -40281,12 +40272,12 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê17",
+                    "ID": "dias_have_mê2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê17",
+                    "ID": "dias_are_in_mê14",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.mê"
@@ -40334,7 +40325,7 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê17",
+                    "ID": "trimestres_have_mê2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -40347,12 +40338,12 @@
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres17",
+                    "ID": "mê_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres17",
+                    "ID": "mê_are_in_trimestres14",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_para_a_data.variation.hierarquia_de_data.trimestre"
@@ -40433,7 +40424,7 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres3",
+                    "ID": "anos_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -40446,12 +40437,12 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos3",
+                    "ID": "trimestres_have_anos1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos13",
+                    "ID": "trimestres_are_in_anos15",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.ano"
@@ -40499,7 +40490,7 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos4",
+                    "ID": "hierarquia_de_data_have_anos2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40532,7 +40523,7 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias4",
+                    "ID": "hierarquia_de_data_have_dias2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40565,7 +40556,7 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê4",
+                    "ID": "hierarquia_de_data_have_mê2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40598,7 +40589,7 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres4",
+                    "ID": "hierarquia_de_data_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -40631,7 +40622,7 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias3",
+                    "ID": "mê_have_dias1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -40644,12 +40635,12 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê3",
+                    "ID": "dias_have_mê1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê13",
+                    "ID": "dias_are_in_mê15",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.mê"
@@ -40697,7 +40688,7 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê3",
+                    "ID": "trimestres_have_mê1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -40710,12 +40701,12 @@
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres3",
+                    "ID": "mê_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres13",
+                    "ID": "mê_are_in_trimestres15",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.data_prevista_entrega.variation.hierarquia_de_data.trimestre"
@@ -42419,270 +42410,6 @@
                 },
                 "State": "Generated"
               },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__br_vence_hoje": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__br_vence_hoje"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__br_vence_hoje",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__br_vence_hoje": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__br_vence_hoje"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__br_vencidos": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__br_vencidos"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__br_vencidos",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__br_vencidos": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__br_vencidos"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__d1__br": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__d1__br"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__d1__br",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__d1__br": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__d1__br"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__d1__vvlog": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__d1__vvlog"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__d1__vvlog",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__d1__vvlog": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__d1__vvlog"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__d2__br": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__d2__br"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__d2__br",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__d2__br": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__d2__br"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__d2__vvlog": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__d2__vvlog"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__d2__vvlog",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__d2__vvlog": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__d2__vvlog"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__vvlog_vence_hoje": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__vvlog_vence_hoje"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__vvlog_vence_hoje",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__vvlog_vence_hoje": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__vvlog_vence_hoje"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_packed_c_gaiola_em_expedicao__vvlog_vencidos": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.packed_c_gaiola_em_expedicao__vvlog_vencidos"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_packed_c_gaiola_em_expedicao__vvlog_vencidos",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.packed_c_gaiola_em_expedicao__vvlog_vencidos": {
-                    "Target": {
-                      "Entity": "medida.packed_c_gaiola_em_expedicao__vvlog_vencidos"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
               "status_oLPN_has_medida_packed_s_gaiola_em_faturamento__br_vence_hoje": {
                 "Binding": {
                   "ConceptualEntity": "status oLPN"
@@ -43168,72 +42895,6 @@
                   "medida.saldo_created_fim_de_separacao_vvlog": {
                     "Target": {
                       "Entity": "medida.saldo_created_fim_de_separacao_vvlog"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_saldo_packed_c_gaiola_em_expedicao_br": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.saldo_packed_c_gaiola_em_expedicao_br"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_saldo_packed_c_gaiola_em_expedicao_br",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.saldo_packed_c_gaiola_em_expedicao_br": {
-                    "Target": {
-                      "Entity": "medida.saldo_packed_c_gaiola_em_expedicao_br"
-                    }
-                  },
-                  "status_oLPN": {
-                    "Target": {
-                      "Entity": "status_oLPN"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "status_oLPN_has_medida_saldo_packed_c_gaiola_em_expedicao_vvlog": {
-                "Binding": {
-                  "ConceptualEntity": "status oLPN"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "medida.saldo_packed_c_gaiola_em_expedicao_vvlog"
-                      },
-                      "Subject": {
-                        "Role": "status_oLPN"
-                      }
-                    },
-                    "ID": "status_oLPNs_have_saldo_packed_c_gaiola_em_expedicao_vvlog",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "medida.saldo_packed_c_gaiola_em_expedicao_vvlog": {
-                    "Target": {
-                      "Entity": "medida.saldo_packed_c_gaiola_em_expedicao_vvlog"
                     }
                   },
                   "status_oLPN": {
@@ -44108,7 +43769,7 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres4",
+                    "ID": "anos_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -44121,12 +43782,12 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos4",
+                    "ID": "trimestres_have_anos",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos12",
+                    "ID": "trimestres_are_in_anos16",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.ano"
@@ -44174,7 +43835,7 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos5",
+                    "ID": "hierarquia_de_data_have_anos1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -44207,7 +43868,7 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias5",
+                    "ID": "hierarquia_de_data_have_dias1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -44240,7 +43901,7 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê5",
+                    "ID": "hierarquia_de_data_have_mê1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -44273,7 +43934,7 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres5",
+                    "ID": "hierarquia_de_data_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -44306,7 +43967,7 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias4",
+                    "ID": "mê_have_dias",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -44319,12 +43980,12 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê4",
+                    "ID": "dias_have_mê",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê12",
+                    "ID": "dias_are_in_mê16",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.mê"
@@ -44372,7 +44033,7 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê4",
+                    "ID": "trimestres_have_mê",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -44385,12 +44046,12 @@
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres4",
+                    "ID": "mê_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres12",
+                    "ID": "mê_are_in_trimestres16",
                     "Preposition": {
                       "Object": {
                         "Role": "status_oLPN.último_update_oLPN.variation.hierarquia_de_data.trimestre"
@@ -45560,7 +45221,7 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.ano"
                       }
                     },
-                    "ID": "anos_have_trimestres",
+                    "ID": "anos_have_trimestres17",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -45573,12 +45234,12 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_anos",
+                    "ID": "trimestres_have_anos17",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_anos16",
+                    "ID": "trimestres_are_in_anos17",
                     "Preposition": {
                       "Object": {
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.ano"
@@ -45626,7 +45287,7 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_anos1",
+                    "ID": "hierarquia_de_data_have_anos",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -45659,7 +45320,7 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_dias1",
+                    "ID": "hierarquia_de_data_have_dias",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -45692,7 +45353,7 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_mê1",
+                    "ID": "hierarquia_de_data_have_mê",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -45725,7 +45386,7 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data"
                       }
                     },
-                    "ID": "hierarquia_de_data_have_trimestres1",
+                    "ID": "hierarquia_de_data_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -45758,7 +45419,7 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_dias",
+                    "ID": "mê_have_dias17",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -45771,12 +45432,12 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.dia"
                       }
                     },
-                    "ID": "dias_have_mê",
+                    "ID": "dias_have_mê17",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "dias_are_in_mê16",
+                    "ID": "dias_are_in_mê17",
                     "Preposition": {
                       "Object": {
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.mê"
@@ -45824,7 +45485,7 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_mê",
+                    "ID": "trimestres_have_mê17",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -45837,12 +45498,12 @@
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.mê"
                       }
                     },
-                    "ID": "mê_have_trimestres",
+                    "ID": "mê_have_trimestres17",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "mê_are_in_trimestres16",
+                    "ID": "mê_are_in_trimestres17",
                     "Preposition": {
                       "Object": {
                         "Role": "t_tempo.data_atual.variation.hierarquia_de_data.trimestre"
@@ -46824,6 +46485,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -47947,7 +47612,7 @@
               "",
               "DIVIDE([qt_pedidos_packed_filter_hoje],hora)"
             ],
-            "formatString": "#,0.00",
+            "formatString": "#,0",
             "lineageTag": "6e3920f6-5988-4ce1-a21c-5259b455aea5"
           },
           {
@@ -47967,7 +47632,7 @@
               "logica",
               ""
             ],
-            "formatString": "#,0.00",
+            "formatString": "#,0",
             "lineageTag": "850fe905-bd9e-479d-aaa3-d92646b35abf"
           },
           {
@@ -47987,7 +47652,7 @@
               "logica",
               ""
             ],
-            "formatString": "#,0.00",
+            "formatString": "#,0",
             "lineageTag": "05bf6c43-61b4-44e0-bc90-b34dec75f5ce"
           },
           {
@@ -48005,7 +47670,7 @@
               "",
               "DIVIDE([qt_pedidos_entrada_filter_hoje],hora)"
             ],
-            "formatString": "#,0.00",
+            "formatString": "#,0",
             "lineageTag": "dd4fd9f7-02f4-4311-8c4f-8b5ecac60a92"
           },
           {
@@ -48023,7 +47688,7 @@
               "",
               "DIVIDE([qt_pedidos_entrada_filter_ontem],hora)"
             ],
-            "formatString": "#,0.00",
+            "formatString": "#,0",
             "lineageTag": "0681d902-796d-41a8-a577-84bc8eb7abcb"
           },
           {
@@ -48041,7 +47706,7 @@
               "",
               "DIVIDE([qt_pedidos_entrada_filter_semana_passada],hora)"
             ],
-            "formatString": "#,0.00",
+            "formatString": "#,0",
             "lineageTag": "b7ce397b-0c78-4f55-ae40-b56dcb5cd34b"
           },
           {
@@ -48314,12 +47979,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_vence_hoje_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\BR",
             "expression": [
               "",
@@ -48341,12 +48000,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_d+1_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\BR",
             "expression": [
               "",
@@ -48368,12 +48021,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_d+2_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\BR",
             "expression": [
               "",
@@ -48395,12 +48042,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_all_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\BR",
             "expression": [
               "",
@@ -48412,12 +48053,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_all_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\VVLOG",
             "expression": [
               "",
@@ -48429,12 +48064,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_vencidos_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\VVLOG",
             "expression": [
               "",
@@ -48456,12 +48085,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_vence_hoje_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\VVLOG",
             "expression": [
               "",
@@ -48483,12 +48106,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_d+1_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\VVLOG",
             "expression": [
               "",
@@ -48510,12 +48127,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_d+2_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\VVLOG",
             "expression": [
               "",
@@ -48587,32 +48198,6 @@
             "lineageTag": "d889af9e-dd3a-4d77-a2bd-62d81f510a91"
           },
           {
-            "name": "packed_c_gaiola_em_expedicao_<>_vvlog_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo BR\\Vencidos",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"VVLOG\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \"Vencidos\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "f67bacf0-939d-4ec5-8062-4e2faa465a3a"
-          },
-          {
             "name": "packed_s_gaiola_em_faturamento_<>_vvlog_vencidos",
             "annotations": [
               {
@@ -48682,32 +48267,6 @@
             ],
             "formatString": "#,0",
             "lineageTag": "83b69ba0-56e1-4e9b-b32b-438adc516f71"
-          },
-          {
-            "name": "packed_c_gaiola_em_expedicao_<>_vvlog_vence_hoje",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo BR\\Vence Hoje",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"VVLOG\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \"Vence Hoje\" || 'status oLPN'[status] = \"Vence Hoje\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "b5b3bc13-7066-4e2d-bde3-f9a96ed4ac03"
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_vvlog_vence_hoje",
@@ -48787,32 +48346,6 @@
             "lineageTag": "a68cd2e0-11a3-44bc-8dd3-e7dedfb159bc"
           },
           {
-            "name": "packed_c_gaiola_em_expedicao_<>_d+1_<>_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo BR\\D+1",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"VVLOG\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \"D+1\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "ffd9c43a-beae-421e-8eab-ed0da9d6252a"
-          },
-          {
             "name": "packed_s_gaiola_em_faturamento_<>_d+1_<>_vvlog",
             "annotations": [
               {
@@ -48890,32 +48423,6 @@
             "lineageTag": "98ceba7c-77f3-4e1e-892c-f4398785cabc"
           },
           {
-            "name": "packed_c_gaiola_em_expedicao_<>_d+2_<>_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo BR\\D+2",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"VVLOG\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \" >D+2\" || 'status oLPN'[status] = \"D+2\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "d8860ba1-be56-4b6c-8d58-aa5c0771efb5"
-          },
-          {
             "name": "packed_s_gaiola_em_faturamento_<>_d+2_<>_vvlog",
             "annotations": [
               {
@@ -48972,22 +48479,6 @@
             ],
             "formatString": "#,0",
             "lineageTag": "f4c6e31e-98f4-4f68-9427-39d646dfeaed"
-          },
-          {
-            "name": "saldo_packed_c_gaiola_em_expedicao_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo BR\\Saldo",
-            "expression": [
-              "",
-              "[packed_c_gaiola_em_expedicao_<>_d+1_<>_vvlog]+[packed_c_gaiola_em_expedicao_<>_d+2_<>_vvlog]+[packed_c_gaiola_em_expedicao_<>_vvlog_vence_hoje]+[packed_c_gaiola_em_expedicao_<>_vvlog_vencidos]"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "262489f9-d424-4c47-855b-7432cf8149e9"
           },
           {
             "name": "saldo_packed_s_gaiola_em_faturamento_br",
@@ -49054,32 +48545,6 @@
             ],
             "formatString": "#,0",
             "lineageTag": "cd8e4913-8f9b-46cc-918c-cb1ee298f9fe"
-          },
-          {
-            "name": "packed_c_gaiola_em_expedicao_<>_br_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vencidos",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"BR\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \"Vencidos\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "197fe90d-48c8-4bb1-95af-d4dec1330d0d"
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_br_vencidos",
@@ -49159,32 +48624,6 @@
             "lineageTag": "db7b001f-cf8e-43a1-852f-a539da33d4e5"
           },
           {
-            "name": "packed_c_gaiola_em_expedicao_<>_br_vence_hoje",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vence Hoje",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"BR\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \"Vence Hoje\" || 'status oLPN'[status] = \"Vence Segunda\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "c8e72f19-4bb9-42b4-ba16-66c091815b68"
-          },
-          {
             "name": "packed_s_gaiola_em_faturamento_<>_br_vence_hoje",
             "annotations": [
               {
@@ -49260,32 +48699,6 @@
             ],
             "formatString": "#,0",
             "lineageTag": "c9af5dc2-cc93-49e3-9703-ced3163f5dd5"
-          },
-          {
-            "name": "packed_c_gaiola_em_expedicao_<>_d+1_<>_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+1",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"BR\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \"D+1\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "03e47a2e-224b-4eee-b6df-e274fc787e12"
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_d+1_<>_br",
@@ -49365,32 +48778,6 @@
             "lineageTag": "f19def6c-fa8d-40f3-94df-ad36ae46457c"
           },
           {
-            "name": "packed_c_gaiola_em_expedicao_<>_d+2_<>_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+2",
-            "expression": [
-              "",
-              "",
-              "VAR logica = ",
-              "CALCULATE(",
-              "    [qt_pedidos_olpn],",
-              "    'status oLPN'[Rota] <> \"BR\",",
-              "    'status oLPN'[Etapa] = \"Packed C. Gaiola - Em Expedição\",",
-              "    'status oLPN'[status] = \" >D+2\" || 'status oLPN'[status] = \"D+2\",",
-              "    'status oLPN'[descricao_atividade] <> \"06_Fim de Separação\")",
-              "",
-              "RETURN",
-              "IF(ISBLANK(logica),\"0\",logica)"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "d86f68ac-c53a-48fc-923a-f33e204ac984"
-          },
-          {
             "name": "packed_s_gaiola_em_faturamento_<>_d+2_<>_br",
             "annotations": [
               {
@@ -49449,22 +48836,6 @@
             "lineageTag": "a639e92e-f491-4de2-ab4b-2e2119fcc23d"
           },
           {
-            "name": "saldo_packed_c_gaiola_em_expedicao_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
-            "displayFolder": "Campo de Tabela\\Campo VVLOG\\Saldo",
-            "expression": [
-              "",
-              "[packed_c_gaiola_em_expedicao_<>_d+1_<>_br]+[packed_c_gaiola_em_expedicao_<>_d+2_<>_br]+[packed_c_gaiola_em_expedicao_<>_br_vence_hoje]+[packed_c_gaiola_em_expedicao_<>_br_vencidos]"
-            ],
-            "formatString": "#,0",
-            "lineageTag": "c8147eab-00fd-41ca-8a0b-92e6011c076b"
-          },
-          {
             "name": "saldo_packed_s_gaiola_em_faturamento_vvlog",
             "annotations": [
               {
@@ -49488,7 +48859,6 @@
               "",
               "[created_em_separacao_<>_vvlog_vencidos]+",
               "[created_fim_de_separacao_<>_vvlog_vencidos]+",
-              "[packed_c_gaiola_em_expedicao_<>_vvlog_vencidos]+",
               "[packed_s_gaiola_em_faturamento_<>_vvlog_vencidos]+",
               "[qtd_pedidos_carteira_vencidos_br]+",
               "[released_vencidos<>vvlog]",
@@ -49499,19 +48869,12 @@
           },
           {
             "name": "all_vencidos_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Colunas verticais",
             "expression": [
               "",
               "",
               "[created_em_separacao_<>_br_vencidos]+",
               "[created_fim_de_separacao_<>_br_vencidos]+",
-              "[packed_c_gaiola_em_expedicao_<>_br_vencidos]+",
               "[packed_s_gaiola_em_faturamento_<>_br_vencidos]+",
               "[qtd_pedidos_carteira_vencidos_vvlog]+",
               "[released_vencidos_<>br]"
@@ -49521,18 +48884,11 @@
           },
           {
             "name": "all_vence_hoje_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Colunas verticais",
             "expression": [
               "",
               "[created_em_separacao_<>_vvlog_vence_hoje]+",
               "[created_fim_de_separacao_<>_vvlog_vence_hoje]+",
-              "[packed_c_gaiola_em_expedicao_<>_vvlog_vence_hoje]+",
               "[packed_s_gaiola_em_faturamento_<>_vvlog_vence_hoje]+",
               "[released_vence_hoje<>vvlog]+",
               "[qtd_pedidos_carteira_vence_hoje_br]"
@@ -49542,18 +48898,11 @@
           },
           {
             "name": "all_vence_hoje_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Colunas verticais",
             "expression": [
               "",
               "[created_em_separacao_<>_br_vence_hoje]+",
               "[created_fim_de_separacao_<>_br_vence_hoje]+",
-              "[packed_c_gaiola_em_expedicao_<>_br_vence_hoje]+",
               "[packed_s_gaiola_em_faturamento_<>_br_vence_hoje]+",
               "[released_vence_hoje_<>br]+",
               "[qtd_pedidos_carteira_vence_hoje_vvlog]"
@@ -49568,7 +48917,6 @@
               "",
               "[created_em_separacao_<>_vvlog_d+1]+",
               "[created_fim_de_separacao_<>_vvlog_d+1]+",
-              "[packed_c_gaiola_em_expedicao_<>_d+1_<>_vvlog]+",
               "[packed_s_gaiola_em_faturamento_<>_d+1_<>_vvlog]+",
               "[qtd_pedidos_carteira_d+1_br]+",
               "[released_d+1_<>vvlog]"
@@ -49578,18 +48926,12 @@
           },
           {
             "name": "all_d+1_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Colunas verticais",
             "expression": [
               "",
               "[created_em_separacao_<>_br_d+1]+",
               "[created_fim_de_separacao_<>_br_d+1]+",
-              "[packed_c_gaiola_em_expedicao_<>_d+1_<>_br]+",
+              "",
               "[packed_s_gaiola_em_faturamento_<>_d+1_<>_br]+",
               "[qtd_pedidos_carteira_d+1_vvlog]+",
               "[released_d+1_<>br]"
@@ -49599,18 +48941,11 @@
           },
           {
             "name": "all_d+2_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Colunas verticais",
             "expression": [
               "",
               "[created_em_separacao_<>_vvlog_d+2]+",
               "[created_fim_de_separacao_<>_vvlog_d+2]+",
-              "[packed_c_gaiola_em_expedicao_<>_d+2_<>_vvlog]+",
               "[packed_s_gaiola_em_faturamento_<>_d+2_<>_vvlog]+",
               "[qtd_pedidos_carteira_d+2_br]+",
               "[released_d+2_<>vvlog]"
@@ -49620,18 +48955,11 @@
           },
           {
             "name": "all_d+2_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Colunas verticais",
             "expression": [
               "",
               "[created_em_separacao_<>_br_d+2]+",
               "[created_fim_de_separacao_<>_br_d+2]+",
-              "[packed_c_gaiola_em_expedicao_<>_d+2_<>_br]+",
               "[packed_s_gaiola_em_faturamento_<>_d+2_<>_br]+",
               "[qtd_pedidos_carteira_d+2_vvlog]+",
               "[released_d+2_<>br]"
@@ -55629,6 +54957,12 @@
               ""
             ],
             "lineageTag": "905655bf-ea80-44da-a220-4f3842681014"
+          },
+          {
+            "name": "zero",
+            "expression": "0",
+            "formatString": "0",
+            "lineageTag": "8216a667-dbc2-444a-9f37-a06d7d325ab7"
           }
         ],
         "partitions": [
