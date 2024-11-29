@@ -46162,6 +46162,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Binary"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "expression": "#\"Arquivo de Amostra (8)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (8)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46484,7 +46488,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -48148,12 +48152,6 @@
           },
           {
             "name": "created_em_separacao_<>_vvlog_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Vencidos",
             "expression": [
               "",
@@ -48174,12 +48172,6 @@
           },
           {
             "name": "created_fim_de_separacao_<>_vvlog_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Vencidos",
             "expression": [
               "",
@@ -48199,12 +48191,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_vvlog_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Vencidos",
             "expression": [
               "",
@@ -48245,12 +48231,6 @@
           },
           {
             "name": "created_fim_de_separacao_<>_vvlog_vence_hoje",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Vence Hoje",
             "expression": [
               "",
@@ -48270,12 +48250,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_vvlog_vence_hoje",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Vence Hoje",
             "expression": [
               "",
@@ -48295,12 +48269,6 @@
           },
           {
             "name": "created_em_separacao_<>_vvlog_d+1",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\D+1",
             "expression": [
               "",
@@ -48321,12 +48289,6 @@
           },
           {
             "name": "created_fim_de_separacao_<>_vvlog_d+1",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\D+1",
             "expression": [
               "",
@@ -48347,12 +48309,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_d+1_<>_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\D+1",
             "expression": [
               "",
@@ -48373,12 +48329,6 @@
           },
           {
             "name": "created_em_separacao_<>_vvlog_d+2",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\D+2",
             "expression": [
               "",
@@ -48399,12 +48349,6 @@
           },
           {
             "name": "created_fim_de_separacao_<>_vvlog_d+2",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\D+2",
             "expression": [
               "",
@@ -48424,12 +48368,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_d+2_<>_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\D+2",
             "expression": [
               "",
@@ -48450,12 +48388,6 @@
           },
           {
             "name": "saldo_created_em_separacao_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Saldo",
             "expression": [
               "",
@@ -48466,12 +48398,6 @@
           },
           {
             "name": "saldo_created_fim_de_separacao_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Saldo",
             "expression": [
               "",
@@ -48482,12 +48408,6 @@
           },
           {
             "name": "saldo_packed_s_gaiola_em_faturamento_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo BR\\Saldo",
             "expression": [
               "",
@@ -48498,12 +48418,6 @@
           },
           {
             "name": "created_em_separacao_<>_br_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vencidos",
             "expression": [
               "",
@@ -48519,16 +48433,11 @@
               "RETURN",
               "IF(ISBLANK(logica),\"0\",logica)"
             ],
+            "formatString": "0",
             "lineageTag": "1a488819-cfae-4ab7-9758-42d2004a5de7"
           },
           {
             "name": "created_fim_de_separacao_<>_br_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vencidos",
             "expression": [
               "",
@@ -48548,12 +48457,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_br_vencidos",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vencidos",
             "expression": [
               "",
@@ -48574,12 +48477,6 @@
           },
           {
             "name": "created_em_separacao_<>_br_vence_hoje",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vence Hoje",
             "expression": [
               "",
@@ -48600,12 +48497,6 @@
           },
           {
             "name": "created_fim_de_separacao_<>_br_vence_hoje",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vence Hoje",
             "expression": [
               "",
@@ -48625,12 +48516,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_br_vence_hoje",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Vence Hoje",
             "expression": [
               "",
@@ -48651,12 +48536,6 @@
           },
           {
             "name": "created_em_separacao_<>_br_d+1",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+1",
             "expression": [
               "",
@@ -48677,12 +48556,6 @@
           },
           {
             "name": "created_fim_de_separacao_<>_br_d+1",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+1",
             "expression": [
               "",
@@ -48702,12 +48575,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_d+1_<>_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+1",
             "expression": [
               "",
@@ -48728,12 +48595,6 @@
           },
           {
             "name": "created_em_separacao_<>_br_d+2",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+2",
             "expression": [
               "",
@@ -48754,12 +48615,6 @@
           },
           {
             "name": "created_fim_de_separacao_<>_br_d+2",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+2",
             "expression": [
               "",
@@ -48779,12 +48634,6 @@
           },
           {
             "name": "packed_s_gaiola_em_faturamento_<>_d+2_<>_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\D+2",
             "expression": [
               "",
@@ -48805,12 +48654,6 @@
           },
           {
             "name": "saldo_created_em_separacao_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Saldo",
             "expression": [
               "",
@@ -48821,12 +48664,6 @@
           },
           {
             "name": "saldo_created_fim_de_separacao_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Saldo",
             "expression": [
               "",
@@ -48837,12 +48674,6 @@
           },
           {
             "name": "saldo_packed_s_gaiola_em_faturamento_vvlog",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isDecimal\":true}"
-              }
-            ],
             "displayFolder": "Campo de Tabela\\Campo VVLOG\\Saldo",
             "expression": [
               "",
@@ -54473,7 +54304,7 @@
           {
             "name": "contagem_back",
             "displayFolder": "Outros",
-            "expression": "\"Faltam\"&\" \"&DATEDIFF(TODAY(),DATE(2024,11,29),DAY)&\" \"&\"dias para a Black Friday!\"",
+            "expression": "\"Black Friday!\"",
             "lineageTag": "16fde9a8-6e82-44b8-81dd-143f3cf8f9ae"
           },
           {
@@ -55327,6 +55158,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -56321,21 +56156,25 @@
                 "else ",
                 "[#\"DT_LIMITE  \"] + #duration(0, 23, 59,59)),",
                 "    #\"Tipo Alterado5\" = Table.TransformColumnTypes(#\"Personalização Adicionada3\",{{\"data limite\", type datetime}}),",
-                "    #\"Personalização Adicionada2\" = Table.AddColumn(#\"Tipo Alterado5\", \"status\", each if DateTime.LocalNow() > DateTime.From([data limite]) then \"Vencidos\"",
+                "    #\"Personalização Adicionada2\" = Table.AddColumn(#\"Tipo Alterado5\", \"status\", each // trat. sexta",
+                "if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 3) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 4) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
+                "",
+                "// trat. sábado",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 3 ) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 4) then \" >D+2\"",
+                "",
+                "// trat. semana ",
+                "else if DateTime.From([data limite]) < DateTime.LocalNow() then \"Vencidos\"",
                 "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 0 then \"Vence Hoje\"",
-                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 1 then \"D+1\" ",
-                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2 then \"D+2\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 4) then \"D+1\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 3) then \"Vence Segunda\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 4) then \"D+1\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
-                "else if (Date.DayOfWeek(DateTime.From(DateTime.LocalNow()), Day.Monday) + 1 = 1) and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) <= 2) then \"Vence Segunda\"",
                 "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 1 then \"D+1\"",
                 "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2 then \"D+2\"",
-                "else \" >D+2\"),",
+                "else if Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 2 then \" >D+2\"",
+                "",
+                "// trat. sobra",
+                "else \"tratar sobra\"),",
                 "    #\"Tipo Alterado3\" = Table.TransformColumnTypes(#\"Personalização Adicionada2\",{{\"status\", type text}}),",
                 "    #\"Coluna Duplicada\" = Table.DuplicateColumn(#\"Tipo Alterado3\", \"data limite\", \"data limite - Copiar\"),",
                 "    #\"Tipo Alterado6\" = Table.TransformColumnTypes(#\"Coluna Duplicada\",{{\"data limite - Copiar\", type date}}),",
@@ -57590,6 +57429,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -58229,21 +58072,34 @@
                 "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Tipo Alterado1\", \"data\", each [Data Limite Expedição] + #duration(0, 23, 59, 59)),",
                 "    #\"Colunas Removidas1\" = Table.RemoveColumns(#\"Personalização Adicionada1\",{\"Data Limite Expedição\"}),",
                 "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Colunas Removidas1\",{{\"data\", \"Data Limite Expedição\"}}),",
-                "    status = Table.AddColumn(#\"Colunas Renomeadas\", \"status\", each if [Etapa] = \"Shipped - Expedido\" then \"Expedido\"",
+                "    status = Table.AddColumn(#\"Colunas Renomeadas\", \"status\", each // trat. simples",
+                "if [Etapa] = \"Shipped - Expedido\" then \"Expedido\"",
                 "else if [Etapa] = \"Cancelled - Cancelado\" then \"Cancelado\"",
+                "",
+                "// trat. sexta",
+                "",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 4) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 5) then \" >D+2\"",
+                "",
+                "// trat. sábado",
+                "",
+                "",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 2) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3 ) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 4) then \" >D+2\"",
+                "",
+                "// trat. semana ",
+                "",
                 "else if DateTime.From([Data Limite Expedição]) < DateTime.LocalNow() then \"Vencidos\"",
                 "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 0 then \"Vence Hoje\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 4) then \"D+1\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 6) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 3) then \"Vence Segunda\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 4) then \"D+1\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 5) then \"D+2\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 7) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
-                "else if (Date.DayOfWeek(DateTime.LocalNow(), Day.Monday) + 1 = 1) and (Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) <= 2) then \"Vence Segunda\"",
                 "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 1 then \"D+1\"",
                 "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 2 then \"D+2\"",
-                "else \" >D+2\"),",
+                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) > 2 then \" >D+2\"",
+                "",
+                "// trat. sobra",
+                "",
+                "else \"tratar sobra\"),",
                 "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(status,{{\"status\", type text}}),",
                 "    #\"Coluna Duplicada\" = Table.DuplicateColumn(#\"Tipo Alterado2\", \"Data Limite Expedição\", \"Data Limite Expedição - Copiar\"),",
                 "    #\"Colunas Renomeadas2\" = Table.RenameColumns(#\"Coluna Duplicada\",{{\"Data Limite Expedição - Copiar\", \"data para a data\"}}),",
@@ -59666,6 +59522,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
