@@ -9182,6 +9182,52 @@
                   }
                 ]
               },
+              "medida.dia_tratado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "fat_dia_tratado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "fat dia tratado": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "fat_dia_tratado": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "medida.ent_dia_tratado": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Medidas",
+                    "ConceptualProperty": "ent_dia_tratado"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ent dia tratado": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ent_dia_tratado": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
               "medida.hora_data": {
                 "Definition": {
                   "Binding": {
@@ -10411,7 +10457,7 @@
                     }
                   },
                   {
-                    "Entrada de Ped. D-1": {
+                    "Entrada de Ped. Ontem": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -10520,7 +10566,7 @@
                     }
                   },
                   {
-                    "Entrada de Ped. D0": {
+                    "Entrada de Ped. Hoje": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -10553,7 +10599,7 @@
                     }
                   },
                   {
-                    "Faturamento de Ped. D0": {
+                    "Faturamento P. Hoje": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -10586,7 +10632,7 @@
                     }
                   },
                   {
-                    "Faturamento de Ped. D-1": {
+                    "Faturamento P. Ontem": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -37026,6 +37072,72 @@
                 },
                 "State": "Generated"
               },
+              "medida_has_dia_tratado": {
+                "Binding": {
+                  "ConceptualEntity": "Medidas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.dia_tratado"
+                      },
+                      "Subject": {
+                        "Role": "medida"
+                      }
+                    },
+                    "ID": "medidas_have_fat_dia_tratado",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida": {
+                    "Target": {
+                      "Entity": "medida"
+                    }
+                  },
+                  "medida.dia_tratado": {
+                    "Target": {
+                      "Entity": "medida.dia_tratado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "medida_has_ent_dia_tratado": {
+                "Binding": {
+                  "ConceptualEntity": "Medidas"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "medida.ent_dia_tratado"
+                      },
+                      "Subject": {
+                        "Role": "medida"
+                      }
+                    },
+                    "ID": "medidas_have_ent_dia_tratado",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "medida": {
+                    "Target": {
+                      "Entity": "medida"
+                    }
+                  },
+                  "medida.ent_dia_tratado": {
+                    "Target": {
+                      "Entity": "medida.ent_dia_tratado"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "medida_has_hora_data": {
                 "Binding": {
                   "ConceptualEntity": "Medidas"
@@ -46162,10 +46274,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Binary"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navegação"
           }
         ],
         "expression": "#\"Arquivo de Amostra (8)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (8)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -54794,6 +54902,32 @@
             "expression": "0",
             "formatString": "0",
             "lineageTag": "8216a667-dbc2-444a-9f37-a06d7d325ab7"
+          },
+          {
+            "name": "fat_dia_tratado",
+            "expression": [
+              "",
+              "",
+              "VAR A = FORMAT(TODAY() - 7,\"ddd\")",
+              "",
+              "VAR B = UPPER(LEFT(A,1))&LOWER(MID(A,2,LEN(A)))",
+              "",
+              "RETURN \"Faturamento de Ped. \"&B"
+            ],
+            "lineageTag": "1abbee9b-fdf9-4e0c-afb6-2122d8205f7e"
+          },
+          {
+            "name": "ent_dia_tratado",
+            "expression": [
+              "",
+              "",
+              "VAR A = FORMAT(TODAY() - 7,\"ddd\")",
+              "",
+              "VAR B = UPPER(LEFT(A,1))&LOWER(MID(A,2,LEN(A)))",
+              "",
+              "RETURN \"Entrada de Ped. \"&B"
+            ],
+            "lineageTag": "aeb9a735-dfd2-4e76-9c17-f3cb63aaa65f"
           }
         ],
         "partitions": [
@@ -56159,12 +56293,20 @@
                 "    #\"Personalização Adicionada2\" = Table.AddColumn(#\"Tipo Alterado5\", \"status\", each // trat. sexta",
                 "if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 3) then \"D+1\"",
                 "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 4) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 5) then \" >D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 4) then \" >D+2\"",
                 "",
                 "// trat. sábado",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 3 ) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 3 ) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 4) then \"D+2\"",
                 "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 4) then \" >D+2\"",
+                "",
+                "// trat. domingo",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 1) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 2 ) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) = 3) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([data limite]) - DateTime.LocalNow()) > 3) then \" >D+2\"",
+                "",
                 "",
                 "// trat. semana ",
                 "else if DateTime.From([data limite]) < DateTime.LocalNow() then \"Vencidos\"",
@@ -58080,14 +58222,22 @@
                 "",
                 "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3) then \"D+1\"",
                 "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 4) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 5) then \" >D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 4) then \" >D+2\"",
                 "",
                 "// trat. sábado",
                 "",
-                "",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 2) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3 ) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 2) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3 ) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 4) then \"D+2\"",
                 "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 4) then \" >D+2\"",
+                "",
+                "// trat. domingo",
+                "",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 1) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 2 ) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 3) then \" >D+2\"",
+                "",
                 "",
                 "// trat. semana ",
                 "",
@@ -59522,10 +59672,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navegação"
           }
         ],
         "columns": [
