@@ -48055,6 +48055,12 @@
           },
           {
             "name": "qtd_pedidos_carteira_vencidos_br",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
             "displayFolder": "CARTEIRA\\BR",
             "expression": [
               "",
@@ -48062,16 +48068,17 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \"vencidos\",",
-              "carteira[TRANSP]=\"BR\")",
+              "carteira[TRANSP]=\"BR\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
               "IF(ISBLANK(logica),\"0\",logica)",
               "RETURN",
               "",
-              "formata"
+              "formata",
+              ""
             ],
-            "formatString": "#,0",
             "lineageTag": "46e7a75f-a909-4c49-841b-b9a509ad6172"
           },
           {
@@ -48168,7 +48175,8 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \"vencidos\",",
-              "carteira[TRANSP]=\"VVLOG\")",
+              "carteira[TRANSP]=\"VVLOG\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
