@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 298.09333147238897,
+        "x": 1858.0143757680266,
         "y": 0
       },
       "nodes": [
@@ -137,6 +137,54 @@
             "width": 234
           },
           "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1977.6315521132849,
+            "y": 218.41531109504808
+          },
+          "nodeIndex": "documentacao_measures",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2261.6315521132847,
+            "y": 218.41531109504808
+          },
+          "nodeIndex": "documentacao_tables",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2545.6315521132847,
+            "y": 218.41531109504808
+          },
+          "nodeIndex": "documentacao_relationships",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2829.6315521132847,
+            "y": 218.41531109504808
+          },
+          "nodeIndex": "documentacao_columns",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",

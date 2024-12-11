@@ -46596,7 +46596,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -48055,12 +48055,6 @@
           },
           {
             "name": "qtd_pedidos_carteira_vencidos_br",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
             "displayFolder": "CARTEIRA\\BR",
             "expression": [
               "",
@@ -48079,6 +48073,7 @@
               "formata",
               ""
             ],
+            "formatString": "0",
             "lineageTag": "46e7a75f-a909-4c49-841b-b9a509ad6172"
           },
           {
@@ -59533,32 +59528,32 @@
                 "",
                 "// trat. sexta",
                 "",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 4) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 5 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 4) then \" >D+2\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 3) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 4) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) > 4) then \" >D+2\"",
                 "",
                 "// trat. sábado",
                 "",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 2) then \"Vence Segunda\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3 ) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 4) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 6 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 4) then \" >D+2\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 2) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 3 ) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 4) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) > 4) then \" >D+2\"",
                 "",
                 "// trat. domingo",
                 "",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 1) then \"Vence Segunda\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 2 ) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) = 3) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.LocalNow()) = 0 and (Duration.Days(DateTime.From([Data Limite Expedição] ) - DateTime.LocalNow()) > 3) then \" >D+2\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 1) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 2 ) then \"D+1\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 3) then \"D+2\"",
+                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) > 3) then \" >D+2\"",
                 "",
                 "",
                 "// trat. semana ",
                 "",
-                "else if DateTime.From([Data Limite Expedição]) < DateTime.LocalNow() then \"Vencidos\"",
-                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 0 then \"Vence Hoje\"",
-                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 1 then \"D+1\"",
-                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) = 2 then \"D+2\"",
-                "else if Duration.Days(DateTime.From([Data Limite Expedição]) - DateTime.LocalNow()) > 2 then \" >D+2\"",
+                "else if Date.From([Data Limite Expedição]) < DateTime.Date(DateTime.LocalNow()) then \"Vencidos\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) = 0 then \"Vence Hoje\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) = 1 then \"D+1\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) = 2 then \"D+2\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) > 2 then \" >D+2\"",
                 "",
                 "// trat. sobra",
                 "",
@@ -62049,6 +62044,1200 @@
                 "    #\"Tipo Alterado\""
               ],
               "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "documentacao_measures",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "aa9962cc46c74052861de0598ec44edd"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "8af0837b-54b2-4f5d-a122-493888885b48",
+            "sourceColumn": "[ID]",
+            "summarizeBy": "count",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "909a37b9-68f7-46b9-af3e-23d2dde93cf5",
+            "sourceColumn": "[Name]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Table",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "1fe98c69-1ab5-4de6-9023-3660db06d8b0",
+            "sourceColumn": "[Table]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "fcfd81dc-7c8d-493d-9ab9-e996985428e0",
+            "sourceColumn": "[Description]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DataType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "e2e4a48a-1aac-427b-b201-f947ba732ade",
+            "sourceColumn": "[DataType]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Expression",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "461f18f6-ea10-4150-85c0-5be56e5abe49",
+            "sourceColumn": "[Expression]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "FormatString",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "5befa41a-d666-44b2-a65d-c2b07225d082",
+            "sourceColumn": "[FormatString]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsHidden",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "e1af42ce-9f79-44c2-b9b3-5ea78fd721ab",
+            "sourceColumn": "[IsHidden]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "3b0552a9-89d9-4d89-9a7b-b3d147161d9a",
+            "sourceColumn": "[State]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "KPIID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "71c88122-f41c-460c-a286-312626955079",
+            "sourceColumn": "[KPIID]",
+            "summarizeBy": "count",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsSimpleMeasure",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "d56536be-3e10-4a02-86d0-028bd87c8cbd",
+            "sourceColumn": "[IsSimpleMeasure]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DisplayFolder",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "67de8b97-c832-4bcf-88ee-6d9ffc8dd203",
+            "sourceColumn": "[DisplayFolder]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DetailRowsDefinition",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "cf3ed8f7-b5f5-4bee-985b-9669c0ab9b03",
+            "sourceColumn": "[DetailRowsDefinition]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DataCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "f7d926ca-299c-403f-a33f-427d0bc72e23",
+            "sourceColumn": "[DataCategory]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "FormatStringDefinition",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "87b4ac08-b136-43bf-bac7-1d2e22b0675c",
+            "sourceColumn": "[FormatStringDefinition]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "LineageTag",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "c73a889c-4cba-42ea-ac06-faf4f9ae76db",
+            "sourceColumn": "[LineageTag]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "c4ba9ac1-ecaa-4f2e-b558-8d8596626e6d",
+        "partitions": [
+          {
+            "name": "documentacao_measures",
+            "mode": "import",
+            "source": {
+              "expression": "INFO.VIEW.MEASURES()",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "documentacao_tables",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "572a8fecdffd4243b3227454ee12047c"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "f067b2c0-34c4-4a74-a29d-e7bf5a0c78b4",
+            "sourceColumn": "[ID]",
+            "summarizeBy": "count",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "194f39b4-85a5-4c16-a1d9-21d2ee92e44e",
+            "sourceColumn": "[Name]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Model",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "3cf6e671-5113-48ad-80cd-c2e3e6b16c9e",
+            "sourceColumn": "[Model]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DataCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "b01b2ac6-2962-4c7d-a385-82b06ecca7ea",
+            "sourceColumn": "[DataCategory]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "916078cb-15d6-4dd9-94eb-207f131ab8d7",
+            "sourceColumn": "[Description]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsHidden",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "25614b1a-d153-4406-b958-f1461e1157ed",
+            "sourceColumn": "[IsHidden]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "StorageMode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "ceadaec5-272b-46b2-b261-97e57e359c8e",
+            "sourceColumn": "[StorageMode]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "TableStorage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "aa97bad9-71f7-4503-a2ff-de26f0f76375",
+            "sourceColumn": "[TableStorage]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Expression",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "ba306baa-84df-4a01-935e-76f799c8ba25",
+            "sourceColumn": "[Expression]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "ShowAsVariationOnly",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "b81ee210-554d-4e12-bf4c-221b6f272dee",
+            "sourceColumn": "[ShowAsVariationOnly]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsPrivate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "7af7581b-9f15-4876-8c25-802fa3dd540e",
+            "sourceColumn": "[IsPrivate]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "CalculationGroupPrecedence",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "87196008-176f-49c1-bf87-ece70fc9907d",
+            "sourceColumn": "[CalculationGroupPrecedence]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "LineageTag",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "d764e15b-e4f8-483a-90fa-c0f0b9284bc4",
+            "sourceColumn": "[LineageTag]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "c250abe4-ba1d-4d35-bc1f-47b46dc67e1f",
+        "partitions": [
+          {
+            "name": "documentacao_tables",
+            "mode": "import",
+            "source": {
+              "expression": "INFO.VIEW.TABLES()",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "documentacao_relationships",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "54c5cec8d92047e48841fc40918ca652"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "ee3a74d9-8c1d-4e91-a245-7841665d32f4",
+            "sourceColumn": "[ID]",
+            "summarizeBy": "count",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "3901d72d-d283-4e05-9fed-2a91c2d905ce",
+            "sourceColumn": "[Name]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Relationship",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "4e9bbdd3-b8e2-44e8-8948-8f0877fcc23a",
+            "sourceColumn": "[Relationship]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Model",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "ca615bf1-b151-4463-9607-c52c281cc1d4",
+            "sourceColumn": "[Model]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsActive",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "2c3249a8-aeb8-422b-a6c4-f784e6d7b672",
+            "sourceColumn": "[IsActive]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "CrossFilteringBehavior",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "dac6e330-83f7-43fc-a20d-7d387e08c164",
+            "sourceColumn": "[CrossFilteringBehavior]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "RelyOnReferentialIntegrity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "a4c6b315-dc83-408a-ad3b-ae7cdfb5b093",
+            "sourceColumn": "[RelyOnReferentialIntegrity]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "FromTable",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "855c865c-59ab-4749-bb7b-655f584b4179",
+            "sourceColumn": "[FromTable]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "FromColumn",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "495471dd-6ff2-4c82-863e-84eaee18d913",
+            "sourceColumn": "[FromColumn]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "FromCardinality",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "5f8ceb82-51d2-4eb3-90c7-773599ccb15d",
+            "sourceColumn": "[FromCardinality]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "ToTable",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "ff893bc0-bdb8-43f3-b979-dc5409c9fcbc",
+            "sourceColumn": "[ToTable]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "ToColumn",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "a50a0030-8794-4cf8-9b7c-6b98adec7e8b",
+            "sourceColumn": "[ToColumn]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "ToCardinality",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "54f50b94-dfc2-4786-85b3-5f555cdb447d",
+            "sourceColumn": "[ToCardinality]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "f4d09d06-6b01-477e-a1d0-34df4a0d0800",
+            "sourceColumn": "[State]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "SecurityFilteringBehavior",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "a32b11ba-a6c8-4daa-91fc-4987a70f3c94",
+            "sourceColumn": "[SecurityFilteringBehavior]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "6a2a8aea-f74b-4ba3-aeac-9f4c61c17a5c",
+        "partitions": [
+          {
+            "name": "documentacao_relationships",
+            "mode": "import",
+            "source": {
+              "expression": "INFO.VIEW.RELATIONSHIPS()",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "documentacao_columns",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "547379b089e64cafab157d6c80beb533"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "052dfa7c-bd9c-40ed-94d8-696ef6b5bb0d",
+            "sourceColumn": "[ID]",
+            "summarizeBy": "count",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "252169ff-e16f-4f43-af44-4558d458f231",
+            "sourceColumn": "[Name]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Table",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "945c3d53-4742-458f-a356-e331a4644ce0",
+            "sourceColumn": "[Table]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DataType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "f148f8fe-8203-4d0c-a767-1f4fe6669d0c",
+            "sourceColumn": "[DataType]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DataCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "96e1c45d-b95d-437c-a472-38fb2ae768cb",
+            "sourceColumn": "[DataCategory]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "d0286b05-e70a-477a-955b-73a5dc1c0fa1",
+            "sourceColumn": "[Description]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsHidden",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "194a826e-bc37-400f-a044-e5f648e0ab85",
+            "sourceColumn": "[IsHidden]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsUnique",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "1e039f1e-2c36-4777-9793-556805e8eec7",
+            "sourceColumn": "[IsUnique]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsKey",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "bcaa6f0a-9196-46e6-95b0-69b872ba62ff",
+            "sourceColumn": "[IsKey]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsNullable",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "09eb4a7e-af80-49ac-a3a8-fed7576662bd",
+            "sourceColumn": "[IsNullable]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Alignment",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "930306e7-9c7c-49af-9250-712ba8866e2d",
+            "sourceColumn": "[Alignment]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "SummarizeBy",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "69aa340c-fea6-473b-815e-df4d0552270b",
+            "sourceColumn": "[SummarizeBy]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "ColumnStorage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "c0a91516-7fd4-4d2a-8be9-cc9434348bcc",
+            "sourceColumn": "[ColumnStorage]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "c42ce6a8-6d50-4fa5-a579-c2586c3f5d6a",
+            "sourceColumn": "[Type]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "SourceColumn",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "42b97a5f-8d33-42dc-97c3-1f7429934a73",
+            "sourceColumn": "[SourceColumn]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Expression",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "c0df78f0-3966-4434-aa45-ec9ffd7407ad",
+            "sourceColumn": "[Expression]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "FormatString",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "3f0efa05-05c8-4d29-8735-77eefde7a4b3",
+            "sourceColumn": "[FormatString]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "IsAvailableInMDX",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "ccf43492-57ec-4286-a4f4-1c0ab507ffff",
+            "sourceColumn": "[IsAvailableInMDX]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "SortByColumn",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "8e7a8367-78a5-4f2f-b8bb-d99f3654c72b",
+            "sourceColumn": "[SortByColumn]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "GroupingBehavior",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "2fab7597-76c0-4076-9f3c-21265a4fe77f",
+            "sourceColumn": "[GroupingBehavior]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "SourceProviderType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "5c3c97d4-d8da-4d41-9bfe-f4f6424e171d",
+            "sourceColumn": "[SourceProviderType]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "DisplayFolder",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "9d27ccbe-5011-41c9-9bd5-4a781a26402e",
+            "sourceColumn": "[DisplayFolder]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "AlternateOf",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "ac603e61-ff49-4358-9776-905145e59623",
+            "sourceColumn": "[AlternateOf]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "LineageTag",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "c9dc7b62-32e4-4455-a3bb-cadddb256cd2",
+            "sourceColumn": "[LineageTag]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "975ccf8d-4b0b-4711-9036-ef5f8c33efcc",
+        "partitions": [
+          {
+            "name": "documentacao_columns",
+            "mode": "import",
+            "source": {
+              "expression": "INFO.VIEW.COLUMNS()",
+              "type": "calculated"
             }
           }
         ]
