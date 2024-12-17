@@ -45766,7 +45766,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -45931,7 +45931,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra (3)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (3)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46063,7 +46063,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra (5)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (5)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46140,7 +46140,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra (6)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (6)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46273,7 +46273,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Binary"
+            "value": "Exception"
           }
         ],
         "expression": "#\"Arquivo de Amostra (8)\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra (8)\", Type=\"Binary\", IsParameterQueryRequired=true]",
@@ -46587,6 +46587,14 @@
         "joinOnDateBehavior": "datePartOnly",
         "toColumn": "Date",
         "toTable": "LocalDateTable_70ce231e-4aa2-4a70-9ace-ea66fc5068c6"
+      },
+      {
+        "name": "00bd9f8f-72d6-4cc0-b530-4032899845f3",
+        "fromColumn": "Data Limite Expedição",
+        "fromTable": "status oLPN",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_ac232e2a-83b0-4b47-81e3-e9456bc653d8"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -46596,7 +46604,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -48085,7 +48093,8 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \"Vence Hoje\" || carteira[status] = \"Vence Segunda\",",
-              "carteira[TRANSP]=\"BR\")",
+              "carteira[TRANSP]=\"BR\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
@@ -48106,7 +48115,8 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \"D+1\",",
-              "carteira[TRANSP] = \"BR\")",
+              "carteira[TRANSP] = \"BR\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
@@ -48127,7 +48137,8 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \" >D+2\" || carteira[status] = \"D+2\",",
-              "carteira[TRANSP]=\"BR\")",
+              "carteira[TRANSP]=\"BR\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
@@ -48192,7 +48203,8 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \"Vence Hoje\" || carteira[status] = \"Vence Segunda\",",
-              "carteira[TRANSP]=\"VVLOG\")",
+              "carteira[TRANSP]=\"VVLOG\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
@@ -48213,7 +48225,8 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \"D+1\",",
-              "carteira[TRANSP] = \"VVLOG\")",
+              "carteira[TRANSP] = \"VVLOG\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
@@ -48234,7 +48247,8 @@
               "VAR logica = ",
               "CALCULATE([qt_pedidos_carteira],",
               "carteira[status] = \"D+2\" || carteira[status] = \" >D+2\",",
-              "carteira[TRANSP]=\"VVLOG\")",
+              "carteira[TRANSP]=\"VVLOG\",",
+              "carteira[ROTA] <> \"SP1976\")",
               "",
               "VAR formata = ",
               "",
@@ -56266,6 +56280,1569 @@
             ],
             "formatString": "#,0",
             "lineageTag": "d6c5c869-e9bf-4205-895a-966338cf7e0a"
+          },
+          {
+            "name": "p_cel_c1_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY() - 1",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[status] = \"Vencidos\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "67c7d4d8-0f6e-4083-ab9a-9569026f1b2f"
+          },
+          {
+            "name": "p_cel_c1_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY() - 1",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[status] = \"Vencidos\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "8656326c-b446-445e-ac9c-53b2adf67908"
+          },
+          {
+            "name": "p_cel_c1_l3_C",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY() - 1",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[status] = \"Vencidos\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOGISTICA E TRANSPORT\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "94610e48-d0ea-4a4f-986b-c3896889363c"
+          },
+          {
+            "name": "p_cel_c1_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY() - 1",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[status] = \"Vencidos\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "10b117f0-24a4-4b00-a102-70011ffd50fd"
+          },
+          {
+            "name": "p_cel_c1_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY() - 1",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[status] = \"Vencidos\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "8d72d4f9-54d4-4282-8efb-0db769566ca9"
+          },
+          {
+            "name": "p_c1_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c1_l1_c]+",
+              "[p_cel_c1_l2_c]+",
+              "[p_cel_c1_l3_c]+",
+              "[p_cel_c1_l4_c]+",
+              "[p_cel_c1_l5_c]"
+            ],
+            "lineageTag": "73ee5d7f-3c92-45f4-a83d-1b681f9420bf"
+          },
+          {
+            "name": "p_cel_c2_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY()",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "63fcfe4f-98b5-4e23-8bd4-cbc8cbbe5ff3"
+          },
+          {
+            "name": "p_cel_c2_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY()",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "075a1c31-48f0-4409-9ba9-313817ce0b9a"
+          },
+          {
+            "name": "p_cel_c2_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY()",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOGISTICA E TRANSPORT\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "d25cdc5e-5786-4a0e-ae4b-28be74e48fd6"
+          },
+          {
+            "name": "p_cel_c2_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY()",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "3b7e0e75-516b-44cd-9c43-cab6b00bef7f"
+          },
+          {
+            "name": "p_cel_c2_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "TODAY()",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "9e8c324f-0af5-4760-81f7-d8e4afdef0bc"
+          },
+          {
+            "name": "p_c2_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c2_l1_c]+",
+              "[p_cel_c2_l2_c]+",
+              "[p_cel_c2_l3_c]+",
+              "[p_cel_c2_l4_c]+",
+              "[p_cel_c2_l5_c]"
+            ],
+            "lineageTag": "75d0fbfa-d012-424b-8776-8b499651f355"
+          },
+          {
+            "name": "P_cel_c3_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY(TODAY(), 1) = 6, ",
+              "    TODAY() + 3, ",
+              "    IF(",
+              "        WEEKDAY(TODAY(), 1) = 7, ",
+              "        TODAY() + 2, ",
+              "        TODAY() + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\",",
+              "carteira[data limite2] = data1",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "cceb7ba9-681b-4ace-8f39-a1e28f8f2e28"
+          },
+          {
+            "name": "P_cel_c3_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY(TODAY(), 1) = 6, ",
+              "    TODAY() + 3, ",
+              "    IF(",
+              "        WEEKDAY(TODAY(), 1) = 7, ",
+              "        TODAY() + 2, ",
+              "        TODAY() + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\",",
+              "carteira[data limite2] = data1",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "653c32a7-7496-45b3-890b-5c58a95e762d"
+          },
+          {
+            "name": "P_cel_c3_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY(TODAY(), 1) = 6, ",
+              "    TODAY() + 3, ",
+              "    IF(",
+              "        WEEKDAY(TODAY(), 1) = 7, ",
+              "        TODAY() + 2, ",
+              "        TODAY() + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOGISTICA E TRANSPORT\",",
+              "carteira[data limite2] = data1",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "61f837ed-52e2-4b93-9ce6-8039ee4dc1e2"
+          },
+          {
+            "name": "P_cel_c3_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY(TODAY(), 1) = 6, ",
+              "    TODAY() + 3, ",
+              "    IF(",
+              "        WEEKDAY(TODAY(), 1) = 7, ",
+              "        TODAY() + 2, ",
+              "        TODAY() + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\",",
+              "carteira[data limite2] = data1",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "04b95685-f399-4030-a227-1d4125d9fa72"
+          },
+          {
+            "name": "P_cel_c3_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY(TODAY(), 1) = 6, ",
+              "    TODAY() + 3, ",
+              "    IF(",
+              "        WEEKDAY(TODAY(), 1) = 7, ",
+              "        TODAY() + 2, ",
+              "        TODAY() + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\",",
+              "carteira[data limite2] = data1",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "30bfa5d5-2072-4e4b-90ad-8fe6c821f210"
+          },
+          {
+            "name": "p_c3_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c3_l1_c]+",
+              "[p_cel_c3_l2_c]+",
+              "[p_cel_c3_l3_c]+",
+              "[p_cel_c3_l4_c]+",
+              "[p_cel_c3_l5_c]"
+            ],
+            "lineageTag": "41023a55-5592-4812-bca5-1710596b16e2"
+          },
+          {
+            "name": "p_cel_c4_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data3], 1) = 6, ",
+              "    [data3] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data3], 1) = 7, ",
+              "        [data3] + 2, ",
+              "        [data3] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "bb3a1704-9c21-4b29-8d89-13bc6657f4f5"
+          },
+          {
+            "name": "p_cel_c4_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data3], 1) = 6, ",
+              "    [data3] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data3], 1) = 7, ",
+              "        [data3] + 2, ",
+              "        [data3] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "174efa85-9ac5-46ab-b4f0-fef851de4145"
+          },
+          {
+            "name": "p_cel_c4_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data3], 1) = 6, ",
+              "    [data3] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data3], 1) = 7, ",
+              "        [data3] + 2, ",
+              "        [data3] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOGISTICA E TRANSPORT\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "71b60ef4-ccc5-406e-945f-9fd6b59d641e"
+          },
+          {
+            "name": "p_cel_c4_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data3], 1) = 6, ",
+              "    [data3] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data3], 1) = 7, ",
+              "        [data3] + 2, ",
+              "        [data3] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "427d6c34-a8c2-4164-acd5-b998cd906ae8"
+          },
+          {
+            "name": "p_cel_c4_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data3], 1) = 6, ",
+              "    [data3] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data3], 1) = 7, ",
+              "        [data3] + 2, ",
+              "        [data3] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "7bd4dfb4-c975-427b-afcf-64c600db1a01"
+          },
+          {
+            "name": "p_c4_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c4_l1_c]+",
+              "[p_cel_c4_l2_c]+",
+              "[p_cel_c4_l3_c]+",
+              "[p_cel_c4_l4_c]+",
+              "[p_cel_c4_l5_c]"
+            ],
+            "lineageTag": "2e7899ab-ff27-459a-976a-040ee316a932"
+          },
+          {
+            "name": "P_cel_c5_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data4], 1) = 6, ",
+              "    [data4] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data4], 1) = 7, ",
+              "        [data4] + 2, ",
+              "        [data4] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "3f525692-6bae-4050-be9c-30174a525569"
+          },
+          {
+            "name": "P_cel_c5_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data4], 1) = 6, ",
+              "    [data4] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data4], 1) = 7, ",
+              "        [data4] + 2, ",
+              "        [data4] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "1384960d-5e21-4bde-99a6-3ddcac2a9dce"
+          },
+          {
+            "name": "P_cel_c5_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data4], 1) = 6, ",
+              "    [data4] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data4], 1) = 7, ",
+              "        [data4] + 2, ",
+              "        [data4] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOSGISTICA E TRANSPORT\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "dde8323c-6b75-4ed0-ac00-743b70b6e619"
+          },
+          {
+            "name": "P_cel_c5_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data4], 1) = 6, ",
+              "    [data4] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data4], 1) = 7, ",
+              "        [data4] + 2, ",
+              "        [data4] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "0cd1281a-901f-4d8a-b860-0636f476de67"
+          },
+          {
+            "name": "P_cel_c5_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data4], 1) = 6, ",
+              "    [data4] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data4], 1) = 7, ",
+              "        [data4] + 2, ",
+              "        [data4] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "44aaf58a-edb4-4ba9-919e-f5ea181695c5"
+          },
+          {
+            "name": "p_c5_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c5_l1_c]+",
+              "[p_cel_c5_l2_c]+",
+              "[p_cel_c5_l3_c]+",
+              "[p_cel_c5_l4_c]+",
+              "[p_cel_c5_l5_c]"
+            ],
+            "lineageTag": "988d4c0b-efe3-4f5e-b7aa-e454b447b27c"
+          },
+          {
+            "name": "P_cel_c6_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data5], 1) = 6, ",
+              "    [data5] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data5], 1) = 7, ",
+              "        [data5] + 2, ",
+              "        [data5] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "5e5a7144-ccd4-4996-bf49-4721c15e0b75"
+          },
+          {
+            "name": "P_cel_c6_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data5], 1) = 6, ",
+              "    [data5] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data5], 1) = 7, ",
+              "        [data5] + 2, ",
+              "        [data5] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "067d07a3-781c-4fa5-aab3-e7121e6a22b4"
+          },
+          {
+            "name": "P_cel_c6_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data5], 1) = 6, ",
+              "    [data5] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data5], 1) = 7, ",
+              "        [data5] + 2, ",
+              "        [data5] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOGISTICA E TRANSPORT\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "72ac489e-673a-48b2-99de-3739af31b498"
+          },
+          {
+            "name": "P_cel_c6_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data5], 1) = 6, ",
+              "    [data5] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data5], 1) = 7, ",
+              "        [data5] + 2, ",
+              "        [data5] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "c8af4e44-b78d-4340-afae-c02df31424e2"
+          },
+          {
+            "name": "P_cel_c6_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data5], 1) = 6, ",
+              "    [data5] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data5], 1) = 7, ",
+              "        [data5] + 2, ",
+              "        [data5] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "76d0bbc0-e9b3-46be-ba52-9e4d4e0702e2"
+          },
+          {
+            "name": "p_c6_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c6_l1_c]+",
+              "[p_cel_c6_l2_c]+",
+              "[p_cel_c6_l3_c]+",
+              "[p_cel_c6_l4_c]+",
+              "[p_cel_c6_l5_c]"
+            ],
+            "lineageTag": "2ea049a2-5b34-4cd3-8493-0ee1164e20f4"
+          },
+          {
+            "name": "P_cel_c7_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data6], 1) = 6, ",
+              "    [data6] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data6], 1) = 7, ",
+              "        [data6] + 2, ",
+              "        [data6] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "9d424d56-cb10-402e-b1be-e74ccf8cb19d"
+          },
+          {
+            "name": "P_cel_c7_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data6], 1) = 6, ",
+              "    [data6] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data6], 1) = 7, ",
+              "        [data6] + 2, ",
+              "        [data6] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "3a480478-c8b9-47aa-87ff-0b6935c8c6fd"
+          },
+          {
+            "name": "P_cel_c7_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data6], 1) = 6, ",
+              "    [data6] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data6], 1) = 7, ",
+              "        [data6] + 2, ",
+              "        [data6] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOGISTICA E TRANSPORT\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "01acef7b-226c-4185-890c-6df1f799f7b9"
+          },
+          {
+            "name": "P_cel_c7_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data6], 1) = 6, ",
+              "    [data6] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data6], 1) = 7, ",
+              "        [data6] + 2, ",
+              "        [data6] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "53e87354-b7fc-4d47-b0d5-1274c3eaa59f"
+          },
+          {
+            "name": "P_cel_c7_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "IF(",
+              "    WEEKDAY([data6], 1) = 6, ",
+              "    [data6] + 3, ",
+              "    IF(",
+              "        WEEKDAY([data6], 1) = 7, ",
+              "        [data6] + 2, ",
+              "        [data6] + 1",
+              "    ))",
+              "",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] = data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "145e7971-83ae-44f4-8bd2-4f79b151f7ad"
+          },
+          {
+            "name": "p_c7_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c7_l1_c]+",
+              "[p_cel_c7_l2_c]+",
+              "[p_cel_c7_l3_c]+",
+              "[p_cel_c7_l4_c]+",
+              "[p_cel_c7_l5_c]"
+            ],
+            "lineageTag": "a5c23f91-7df8-42ad-8c91-12fbf3748e45"
+          },
+          {
+            "name": "P_cel_c8_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "    IF(",
+              "        WEEKDAY([data7], 1) = 6, ",
+              "        [data7] + 3, ",
+              "        IF(",
+              "            WEEKDAY([data7], 1) = 7, ",
+              "            [data7] + 2, ",
+              "            [data7] + 1",
+              "        )",
+              "    )",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] >= data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"BRASIL WEB TRANSPORTES E LOGIS\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "c1ecc2f0-d5b1-461e-a2ec-9c26c62e8d07"
+          },
+          {
+            "name": "P_cel_c8_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "    IF(",
+              "        WEEKDAY([data7], 1) = 6, ",
+              "        [data7] + 3, ",
+              "        IF(",
+              "            WEEKDAY([data7], 1) = 7, ",
+              "            [data7] + 2, ",
+              "            [data7] + 1",
+              "        )",
+              "    )",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] >= data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"FAVORITA TRANSPORTES LTDA\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "42a87acb-996f-4da0-9870-d7c70ee79733"
+          },
+          {
+            "name": "P_cel_c8_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "    IF(",
+              "        WEEKDAY([data7], 1) = 6, ",
+              "        [data7] + 3, ",
+              "        IF(",
+              "            WEEKDAY([data7], 1) = 7, ",
+              "            [data7] + 2, ",
+              "            [data7] + 1",
+              "        )",
+              "    )",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] >= data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"SOMERLOG LOGISTICA E TRANSPORT\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "5e5baf2e-b29b-475a-8187-eadaff9f3421"
+          },
+          {
+            "name": "P_cel_c8_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "    IF(",
+              "        WEEKDAY([data7], 1) = 6, ",
+              "        [data7] + 3, ",
+              "        IF(",
+              "            WEEKDAY([data7], 1) = 7, ",
+              "            [data7] + 2, ",
+              "            [data7] + 1",
+              "        )",
+              "    )",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] >= data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"TRANSLAGUNA ARMAZENAGEM E TRAN\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "a273dc40-27ff-4fb9-900b-30a6f0dfad78"
+          },
+          {
+            "name": "P_cel_c8_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "",
+              "VAR data1 = ",
+              "    IF(",
+              "        WEEKDAY([data7], 1) = 6, ",
+              "        [data7] + 3, ",
+              "        IF(",
+              "            WEEKDAY([data7], 1) = 7, ",
+              "            [data7] + 2, ",
+              "            [data7] + 1",
+              "        )",
+              "    )",
+              "VAR logica = ",
+              "CALCULATE(SUM(carteira[CBG_PV   ]),",
+              "carteira[ROTA] = \"SP1976\",",
+              "carteira[data limite2] >= data1,",
+              "carteira[   TRANSPORTADOR                         .2] = \"VENKON EXPRESS TRANSPORTES\"",
+              ")",
+              "",
+              "RETURN ",
+              "IF(ISBLANK(",
+              "logica),\"0\",logica)"
+            ],
+            "lineageTag": "455ec5eb-2058-479b-a85b-330f46253ef8"
+          },
+          {
+            "name": "p_c8_total_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c8_l1_c]+",
+              "[p_cel_c8_l2_c]+",
+              "[p_cel_c8_l3_c]+",
+              "[p_cel_c8_l4_c]+",
+              "[p_cel_c8_l5_c]"
+            ],
+            "lineageTag": "c4b0334d-d15a-4401-8638-cde9cd1842b9"
+          },
+          {
+            "name": "p_cel_c9_l1_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c1_l1_c]+",
+              "[p_cel_c2_l1_c]+",
+              "[p_cel_c3_l1_c]+",
+              "[p_cel_c4_l1_c]+",
+              "[p_cel_c5_l1_c]+",
+              "[p_cel_c6_l1_c]+",
+              "[p_cel_c7_l1_c]+",
+              "[p_cel_c8_l1_c]",
+              "",
+              ""
+            ],
+            "lineageTag": "73e11c33-58e3-4717-b30e-62cb83d37baf"
+          },
+          {
+            "name": "p_cel_c9_l2_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c1_l2_c]+",
+              "[p_cel_c2_l2_c]+",
+              "[p_cel_c3_l2_c]+",
+              "[p_cel_c4_l2_c]+",
+              "[p_cel_c5_l2_c]+",
+              "[p_cel_c6_l2_c]+",
+              "[p_cel_c7_l2_c]+",
+              "[p_cel_c8_l2_c]",
+              ""
+            ],
+            "lineageTag": "e744e208-03f3-4e5d-8c26-c194a59ab6bf"
+          },
+          {
+            "name": "p_cel_c9_l3_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c1_l3_c]+",
+              "[p_cel_c2_l3_c]+",
+              "[p_cel_c3_l3_c]+",
+              "[p_cel_c4_l3_c]+",
+              "[p_cel_c5_l3_c]+",
+              "[p_cel_c6_l3_c]+",
+              "[p_cel_c7_l3_c]+",
+              "[p_cel_c8_l3_c]",
+              ""
+            ],
+            "lineageTag": "7bb1b21f-d860-4bcb-8aad-13f4ad56e2ca"
+          },
+          {
+            "name": "p_cel_c9_l4_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c1_l4_c]+",
+              "[p_cel_c2_l4_c]+",
+              "[p_cel_c3_l4_c]+",
+              "[p_cel_c4_l4_c]+",
+              "[p_cel_c5_l4_c]+",
+              "[p_cel_c6_l4_c]+",
+              "[p_cel_c7_l4_c]+",
+              "[p_cel_c8_l4_c]",
+              ""
+            ],
+            "lineageTag": "5d9d15cd-1120-4f73-a293-263882e21172"
+          },
+          {
+            "name": "p_cel_c9_l5_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c1_l5_c]+",
+              "[p_cel_c2_l5_c]+",
+              "[p_cel_c3_l5_c]+",
+              "[p_cel_c4_l5_c]+",
+              "[p_cel_c5_l5_c]+",
+              "[p_cel_c6_l5_c]+",
+              "[p_cel_c7_l5_c]+",
+              "[p_cel_c8_l5_c]",
+              ""
+            ],
+            "lineageTag": "fac820e2-feb1-4f62-88f1-6c6d5b04e988"
+          },
+          {
+            "name": "totalgeral_c",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "[p_cel_c9_l1_c]+",
+              "[p_cel_c9_l2_c]+",
+              "[p_cel_c9_l3_c]+",
+              "[p_cel_c9_l4_c]+",
+              "[p_cel_c9_l5_c]"
+            ],
+            "lineageTag": "7c336ec2-d2fa-44a8-87ab-4ca8dba14a58"
           }
         ],
         "partitions": [
@@ -56290,7 +57867,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -56629,7 +58206,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -58878,7 +60455,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -59450,12 +61027,28 @@
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
               }
             ],
-            "dataType": "string",
+            "dataType": "dateTime",
+            "formatString": "Long Date",
             "lineageTag": "e9eb1e26-ed06-41b9-b587-cd3717a9879f",
             "sourceColumn": "Data Limite Expedição",
-            "summarizeBy": "none"
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hierarquia de datas",
+                  "table": "LocalDateTable_ac232e2a-83b0-4b47-81e3-e9456bc653d8"
+                },
+                "isDefault": true,
+                "relationship": "00bd9f8f-72d6-4cc0-b530-4032899845f3"
+              }
+            ]
           },
           {
             "name": "data para a data",
@@ -59519,41 +61112,42 @@
                 "else if [Status oLPN] = \"Shipped\" then \"Shipped - Expedido\"",
                 "else \"Cancelled - Cancelado\"),",
                 "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Personalização Adicionada\",{{\"Etapa\", type text}, {\"Data Limite Expedição\", type datetime}}),",
-                "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Tipo Alterado1\", \"data\", each [Data Limite Expedição] + #duration(0, 23, 59, 59)),",
+                "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Tipo Alterado1\", \"data\", each [Data Limite Expedição]),",
                 "    #\"Colunas Removidas1\" = Table.RemoveColumns(#\"Personalização Adicionada1\",{\"Data Limite Expedição\"}),",
-                "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Colunas Removidas1\",{{\"data\", \"Data Limite Expedição\"}}),",
+                "    #\"Tipo Alterado11\" = Table.TransformColumnTypes(#\"Colunas Removidas1\",{{\"data\", type date}}),",
+                "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Tipo Alterado11\",{{\"data\", \"Data Limite Expedição\"}}),",
                 "    status = Table.AddColumn(#\"Colunas Renomeadas\", \"status\", each // trat. simples",
                 "if [Etapa] = \"Shipped - Expedido\" then \"Expedido\"",
                 "else if [Etapa] = \"Cancelled - Cancelado\" then \"Cancelado\"",
                 "",
                 "// trat. sexta",
                 "",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 3) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 4) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) > 4) then \" >D+2\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 3) then \"D+1\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow()- #duration(0, 3, 0, 0))) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 4) then \"D+2\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 5 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) > 4) then \" >D+2\"",
                 "",
                 "// trat. sábado",
                 "",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 2) then \"Vence Segunda\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 3 ) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 4) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) > 4) then \" >D+2\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 2) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 3 ) then \"D+1\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 4) then \"D+2\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 6 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) > 4) then \" >D+2\"",
                 "",
                 "// trat. domingo",
                 "",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 1) then \"Vence Segunda\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 2 ) then \"D+1\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) = 3) then \"D+2\"",
-                "else if Date.DayOfWeek(DateTime.Date(DateTime.LocalNow())) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - DateTime.Date(DateTime.LocalNow())) > 3) then \" >D+2\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 1) then \"Vence Segunda\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 2 ) then \"D+1\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 3) then \"D+2\"",
+                "else if Date.DayOfWeek(Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 0 and (Duration.Days(Date.From([Data Limite Expedição] ) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) > 3) then \" >D+2\"",
                 "",
                 "",
                 "// trat. semana ",
                 "",
                 "else if Date.From([Data Limite Expedição]) < DateTime.Date(DateTime.LocalNow()) then \"Vencidos\"",
-                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) = 0 then \"Vence Hoje\"",
-                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) = 1 then \"D+1\"",
-                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) = 2 then \"D+2\"",
-                "else if Duration.Days(Date.From([Data Limite Expedição]) - DateTime.Date(DateTime.LocalNow())) > 2 then \" >D+2\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 0 then \"Vence Hoje\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 1 then \"D+1\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) = 2 then \"D+2\"",
+                "else if Duration.Days(Date.From([Data Limite Expedição]) - Date.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))) > 2 then \" >D+2\"",
                 "",
                 "// trat. sobra",
                 "",
@@ -60428,7 +62022,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Table"
+            "value": "Exception"
           }
         ],
         "columns": [
@@ -60950,6 +62544,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -61011,10 +62609,10 @@
                 "let",
                 "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WMlSKjQUA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [hora = _t]),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"hora\", Int64.Type}}),",
-                "    #\"Personalização Adicionada\" = Table.AddColumn(#\"Tipo Alterado\", \"hora_atual\", each Time.From(DateTime.LocalNow() - #duration(0, 3, 0, 0))),",
+                "    #\"Personalização Adicionada\" = Table.AddColumn(#\"Tipo Alterado\", \"hora_atual\", each Time.From(DateTime.LocalNow() - #duration(0,3,0,0))),",
                 "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Personalização Adicionada\",{{\"hora_atual\", type time}}),",
                 "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado1\",{\"hora\"}),",
-                "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Colunas Removidas\", \"data_atual\", each DateTime.Date(DateTime.LocalNow())),",
+                "    #\"Personalização Adicionada1\" = Table.AddColumn(#\"Colunas Removidas\", \"data_atual\", each Date.From(DateTime.LocalNow() - #duration(0,3,0,0))),",
                 "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Personalização Adicionada1\",{{\"data_atual\", type date}})",
                 "in",
                 "    #\"Tipo Alterado2\""
@@ -63241,6 +64839,207 @@
             }
           }
         ]
+      },
+      {
+        "name": "LocalDateTable_ac232e2a-83b0-4b47-81e3-e9456bc653d8",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "1fc21b6b-c425-4c50-ad58-5028c6bcf206",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "d9aaa250-c452-4ee7-81be-3493f06e969d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "08087f06-4d13-48db-acd4-120679430d44",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "21af483e-568a-4f29-baae-236200a29f20",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "88d91ee2-74f9-4639-99e4-64004cef2df0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "dffe4991-bce0-4124-9d8a-a89893c8a9c8",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "7b9033b4-616c-4dea-956c-08b6c4ce4180",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Ano",
+                "column": "Ano",
+                "lineageTag": "8623abd2-d80b-4e1a-a23a-aa219db3988f",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "4980eae7-5e08-4def-8890-d1199a5bb91a",
+                "ordinal": 1
+              },
+              {
+                "name": "Mês",
+                "column": "Mês",
+                "lineageTag": "67936225-ac79-473e-8722-b3d176bf3225",
+                "ordinal": 2
+              },
+              {
+                "name": "Dia",
+                "column": "Dia",
+                "lineageTag": "eb6934f6-a428-490a-b72e-8e0293dd6ac6",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "cb66b4bc-6fea-41af-bdd1-179f3f97ea30"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "4d89cd5c-6736-439f-98d1-399c171c2eaf",
+        "partitions": [
+          {
+            "name": "LocalDateTable_ac232e2a-83b0-4b47-81e3-e9456bc653d8",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('status oLPN'[Data Limite Expedição])), 1, 1), Date(Year(MAX('status oLPN'[Data Limite Expedição])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
       }
     ]
   }
