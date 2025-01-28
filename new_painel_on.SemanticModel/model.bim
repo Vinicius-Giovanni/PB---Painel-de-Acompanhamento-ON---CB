@@ -58243,12 +58243,6 @@
           },
           {
             "name": "P_cel_c7_l7",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
             "expression": [
               "",
               "",
@@ -58273,16 +58267,11 @@
               "IF(ISBLANK(",
               "logica),\"0\",logica)"
             ],
+            "formatString": "0",
             "lineageTag": "df88867d-7ef2-4360-ac64-e35d29dc2b52"
           },
           {
             "name": "P_cel_c8_l7",
-            "annotations": [
-              {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
-              }
-            ],
             "expression": [
               "",
               "",
@@ -58307,6 +58296,7 @@
               "IF(ISBLANK(",
               "logica),\"0\",logica)"
             ],
+            "formatString": "0",
             "lineageTag": "e159586b-36d7-47e2-ae55-a0eb7ceb4eca"
           },
           {
