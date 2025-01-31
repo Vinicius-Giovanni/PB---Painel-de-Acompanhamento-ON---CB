@@ -63861,6 +63861,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -64188,7 +64192,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"hdO9boQwDADgV7GYWykk/I4GcogrJCih12tPN9xQdezSoY/fAHELukidsORPju2EyyUqBY8eIjvGZVHOgRxgkC2C0RNCdH24RDHjbCGcceGCWhsjO219UhSUzF0gz6OR1uKS5IVI12SRzcX/Ch+bDr7BjMQyz3IWYNVvtZxYHKp2JFYQ4yFmiZXERICNxrOEEUsCzFY1uZjcPPPw/nED8/l1825oPcu4Z+W+XMwZg6bDXreaqCCa3lOLg4QGX8kmZLNQWSMnv8SS+wbW4G5sSUwQC23nUJ3JpeTSgKNZSrq6Ndgw1ThW06l0dWugtBmwh8qsD5H5h5pn/qFaPUjjFrbJcrbcQ2XQdj28yAomg8qO2kzSggSnO7v38xoOeNKmc/1sdT81uKfzKo7YuCLwCAeDdacVNtptzbrP3i4X4hv8T/NkfovL2T22zwoB3eRvUmHrxpRLV1sv4nnIk1RPWoH/5batR9frDw==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [CÓDIGO = _t, ROTA = _t, #\"TIPO DE ENTREGA\" = _t]),",
+                "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"jdO9TsMwEADgVzllLsix8zteEjdKSezIDqVQdeiAGFkYeHycxAcpeGDKSffp7LtzzueoFDzaRXaMy6KcAznAIFsEoyeE6LI7RzHjbCGcceGCWhsjO219UhSUzF0gT6OR1uKS5IVI12SRzcV/Ch+aDj7BjMQyz3IWYNV3tZxYHKp2IFYQ4yFmiZXERICNxrOEEUsCzFY1uZjc3PPw+nYF8/5x9W5oPcu4Z+VtuZgzBk2HvW41UUE0/UstDhIafCabkM1CZY2c/BBL7i+wBn/alsQEsdB09tWJXEouDTjqpaTVrcGGqcaxmk6l1a2B0mbAHiqzPkTmH2qe/X6o95s8Z8smKoO26+FJVjAZVHbUZpIWJLgBd/bWz4PY41Gbzt1oq/upwVs6D+OAjSsCd7A3WHdaYaPd3Kz73NplJXqQ5h+aJ/NrXM7usX1UCOh6f5EKW9eoXG619SKemzxK9aAV+J9ue/XocvkC\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [CÓDIGO = _t, ROTA = _t, #\"TIPO DE ENTREGA\" = _t]),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"CÓDIGO\", Int64.Type}, {\"ROTA\", type text}, {\"TIPO DE ENTREGA\", type text}})",
                 "in",
                 "    #\"Tipo Alterado\""
@@ -64606,6 +64610,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
